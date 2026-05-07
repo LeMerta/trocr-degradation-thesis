@@ -3,7 +3,12 @@
 Bachelor thesis investigating TrOCR performance under image degradation.
 
 ## Project Structure
-- `scripts/` — one-time data preparation scripts
+
+
+- `src/` — core modules (degradation functions)
+- `notebooks/` — experiments and visualizations
+- `scripts/` — one-time scripts for data preperation and calculatiing metrics
+- `results/` — calculated metrics
 
 ## Setup
 `pip install -r requirements.txt`
