@@ -118,10 +118,10 @@ with open(CSV_PATH, "a", newline="") as f:
             "method": "none",
             "intensity": "none",
             "model": MODEL_ID,
-            "cer": round(cer_score),
-            "wer": round(wer_score),
-            "cer_lower": round(cer_score_lowered),
-            "wer_lower": round(wer_score_lowered),
+            "cer": cer_score,
+            "wer": wer_score,
+            "cer_lower": cer_score_lowered,
+            "wer_lower": wer_score_lowered,
         }
     )
 

@@ -1,0 +1,3 @@
+dataset,method,intensity,model,cer,wer,cer_lower,wer_lower
+iam,none,none,microsoft/trocr-base-handwritten,0.04855273213603362,0.11865648619466296,0.046761559037065345,0.11248650316211631
+rimes,none,none,microsoft/trocr-base-handwritten,0.2461372721344938,0.8077673346338003,0.24106256910384713,0.7992551870899096
