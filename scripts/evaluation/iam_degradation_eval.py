@@ -27,7 +27,6 @@ FIELDNAMES = [
     "method",
     "intensity",
     "model",
-    "finetune_method",
     "cer",
     "wer",
     "cer_lower",
