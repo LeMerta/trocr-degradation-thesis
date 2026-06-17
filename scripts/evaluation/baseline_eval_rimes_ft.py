@@ -1,19 +1,9 @@
 """
-baseline_eval_iam.py
+baseline_eval_rimes_ft.py
 
-Evaluates the pretrained TrOCR base handwritten model on the raw IAM test set
-and computes CER and WER., both lowered and not lowered. 
-Used to compare baseline performance to results in
-the TrOCR paper (Li et al., 2021) before degradation experiments.
-Creates results/results.csv and stores results there.
-
-Expected results from TrOCR paper:
-    CER: 3.42%
-    WER: 9.35%
-
-Reference:
-    Li et al. (2021). TrOCR: Transformer-based Optical Character Recognition
-    with Pre-trained Models. https://arxiv.org/abs/2109.10282
+Evaluates the finetuned base RIMES TrOCR model on the raw RIMES test set
+and computes CER and WER, both lowered and not lowered.
+Stores results in results/results.csv .
 """
 
 import torch
@@ -21,12 +11,16 @@ import csv
 import os
 from datasets import load_dataset
 from transformers import TrOCRProcessor, VisionEncoderDecoderModel
+from PIL import Image
+import io
 from jiwer import cer, wer
 
 # Configuration
 
 HF_REPO_ID = "LeMerta/bachelor-thesis-datasets"
-MODEL_ID = "microsoft/trocr-base-handwritten"
+PROCESSOR_ID = "microsoft/trocr-base-handwritten"
+HF_REPO_ID_MODELS = "LeMerta/finetuned-trocr-models"
+MODEL_ID = "RIMES-base"
 BATCH_SIZE = 8
 CSV_PATH = "results/results.csv"
 FIELDNAMES = [
@@ -42,15 +36,18 @@ FIELDNAMES = [
 
 # Load dataset
 
-print("Loading IAM test set...")
-dataset = load_dataset(HF_REPO_ID, data_dir="iam/raw", split="test")
+print("Loading RIMES test set...")
+dataset = load_dataset(HF_REPO_ID, data_dir="rimes/raw", split="test")
 print(f"  {len(dataset)} samples")
 
 # Load model
 
 print(f"\nLoading model: {MODEL_ID}...")
-processor = TrOCRProcessor.from_pretrained(MODEL_ID)
-model = VisionEncoderDecoderModel.from_pretrained(MODEL_ID)
+processor = TrOCRProcessor.from_pretrained(PROCESSOR_ID)
+model = VisionEncoderDecoderModel.from_pretrained(
+    f"{HF_REPO_ID_MODELS}",
+    subfolder=f"RIMES_models/{MODEL_ID}",
+)
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model = model.to(device)
@@ -66,7 +63,9 @@ references = []
 for i in range(0, len(dataset), BATCH_SIZE):
     batch = dataset[i : i + BATCH_SIZE]
 
-    images = [img.convert("RGB") for img in batch["image"]]
+    images = [
+        Image.open(io.BytesIO(img["bytes"])).convert("RGB") for img in batch["image"]
+    ]
     labels = batch["text"]
 
     pixel_values = processor(images, return_tensors="pt").pixel_values.to(device)
@@ -101,9 +100,6 @@ print(f"  CER: {cer_score * 100:.2f}%")
 print(f"  WER: {wer_score * 100:.2f}%")
 print(f"  CER (lowered): {cer_score_lowered * 100:.2f}%")
 print(f"  WER (lowered): {wer_score_lowered * 100:.2f}%")
-print(f"\nExpected from TrOCR paper:")
-print(f"  CER: 3.42%")
-print(f"  WER: 9.35%")
 
 # Push results to csv file
 
@@ -115,7 +111,7 @@ with open(CSV_PATH, "a", newline="") as f:
         writer.writeheader()
     writer.writerow(
         {
-            "dataset": "iam",
+            "dataset": "rimes",
             "method": "none",
             "intensity": "none",
             "model": MODEL_ID,

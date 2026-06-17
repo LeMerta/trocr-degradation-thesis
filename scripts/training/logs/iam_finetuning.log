@@ -1,0 +1,472 @@
+nohup: ignoring input
+Loading processor...
+/data/lmerta/venvs/myenv/lib/python3.9/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Training for: method=awgn | intensity=150 
+Loading datasets...
+  Train: 6161 | Val: 966
+Preprocessing datasets...
+Map:   0%|          | 0/966 [00:00<?, ? examples/s]Map: 100%|██████████| 966/966 [00:12<00:00, 77.06 examples/s]Map: 100%|██████████| 966/966 [00:15<00:00, 60.56 examples/s]
+Some weights of VisionEncoderDecoderModel were not initialized from the model checkpoint at microsoft/trocr-base-handwritten and are newly initialized: ['encoder.pooler.dense.bias', 'encoder.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+{'eval_loss': 6.303098678588867, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.08601066128799885, 'eval_runtime': 90.0181, 'eval_samples_per_second': 10.731, 'eval_steps_per_second': 0.678}
+{'eval_loss': 6.303098678588867, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.08601066128799885, 'eval_runtime': 90.0181, 'eval_samples_per_second': 10.731, 'eval_steps_per_second': 0.678}
+Some weights of VisionEncoderDecoderModel were not initialized from the model checkpoint at microsoft/trocr-base-handwritten and are newly initialized: ['encoder.pooler.dense.bias', 'encoder.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+{'loss': 0.8124, 'grad_norm': 4.552406311035156, 'learning_rate': 9.60518134715026e-07, 'epoch': 1.0}
+{'eval_loss': 0.23118680715560913, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.02818998223118667, 'eval_runtime': 81.8633, 'eval_samples_per_second': 11.8, 'eval_steps_per_second': 0.745, 'epoch': 1.0}
+{'loss': 0.1197, 'grad_norm': 26.189855575561523, 'learning_rate': 9.205181347150258e-07, 'epoch': 2.0}
+{'eval_loss': 0.18243229389190674, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.025476636411660182, 'eval_runtime': 82.8179, 'eval_samples_per_second': 11.664, 'eval_steps_per_second': 0.737, 'epoch': 2.0}
+{'loss': 0.0834, 'grad_norm': 0.2213670164346695, 'learning_rate': 8.805181347150259e-07, 'epoch': 3.0}
+{'eval_loss': 0.17001868784427643, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.024348076646016424, 'eval_runtime': 82.5385, 'eval_samples_per_second': 11.704, 'eval_steps_per_second': 0.739, 'epoch': 3.0}
+{'loss': 0.062, 'grad_norm': 3.6360411643981934, 'learning_rate': 8.405181347150259e-07, 'epoch': 4.0}
+{'eval_loss': 0.1589069366455078, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.021682754646304567, 'eval_runtime': 82.6407, 'eval_samples_per_second': 11.689, 'eval_steps_per_second': 0.738, 'epoch': 4.0}
+{'loss': 0.0477, 'grad_norm': 0.2063254863023758, 'learning_rate': 8.005181347150259e-07, 'epoch': 5.0}
+{'eval_loss': 0.1553804725408554, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.022379100033616674, 'eval_runtime': 83.3065, 'eval_samples_per_second': 11.596, 'eval_steps_per_second': 0.732, 'epoch': 5.0}
+{'loss': 0.0379, 'grad_norm': 0.24479779601097107, 'learning_rate': 7.605181347150259e-07, 'epoch': 6.0}
+{'eval_loss': 0.15394191443920135, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.021730778466119195, 'eval_runtime': 83.3743, 'eval_samples_per_second': 11.586, 'eval_steps_per_second': 0.732, 'epoch': 6.0}
+{'loss': 0.031, 'grad_norm': 0.1612134724855423, 'learning_rate': 7.205181347150259e-07, 'epoch': 7.0}
+{'eval_loss': 0.1528601199388504, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.020482159150938865, 'eval_runtime': 83.1196, 'eval_samples_per_second': 11.622, 'eval_steps_per_second': 0.734, 'epoch': 7.0}
+{'loss': 0.0249, 'grad_norm': 0.3937755227088928, 'learning_rate': 6.805181347150258e-07, 'epoch': 8.0}
+{'eval_loss': 0.1572967916727066, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.021970897565192337, 'eval_runtime': 82.7911, 'eval_samples_per_second': 11.668, 'eval_steps_per_second': 0.737, 'epoch': 8.0}
+{'loss': 0.0209, 'grad_norm': 1.1859076023101807, 'learning_rate': 6.405181347150259e-07, 'epoch': 9.0}
+{'eval_loss': 0.1549001932144165, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.021298564087787544, 'eval_runtime': 82.8661, 'eval_samples_per_second': 11.657, 'eval_steps_per_second': 0.736, 'epoch': 9.0}
+{'loss': 0.0174, 'grad_norm': 7.024724960327148, 'learning_rate': 6.005181347150259e-07, 'epoch': 10.0}
+{'eval_loss': 0.15623624622821808, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.021010421168899774, 'eval_runtime': 83.1433, 'eval_samples_per_second': 11.618, 'eval_steps_per_second': 0.734, 'epoch': 10.0}
+{'loss': 0.0144, 'grad_norm': 2.7186102867126465, 'learning_rate': 5.605181347150258e-07, 'epoch': 11.0}
+{'eval_loss': 0.15887820720672607, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.02144263554723143, 'eval_runtime': 83.2213, 'eval_samples_per_second': 11.608, 'eval_steps_per_second': 0.733, 'epoch': 11.0}
+{'loss': 0.0125, 'grad_norm': 3.822000741958618, 'learning_rate': 5.205181347150259e-07, 'epoch': 12.0}
+{'eval_loss': 0.16033127903938293, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.02079431397973395, 'eval_runtime': 83.4826, 'eval_samples_per_second': 11.571, 'eval_steps_per_second': 0.731, 'epoch': 12.0}
+{'loss': 0.0109, 'grad_norm': 7.014035224914551, 'learning_rate': 4.805181347150259e-07, 'epoch': 13.0}
+{'eval_loss': 0.16254183650016785, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.0212265283580656, 'eval_runtime': 82.9678, 'eval_samples_per_second': 11.643, 'eval_steps_per_second': 0.735, 'epoch': 13.0}
+{'loss': 0.0098, 'grad_norm': 10.24461841583252, 'learning_rate': 4.405181347150259e-07, 'epoch': 14.0}
+{'eval_loss': 0.16322307288646698, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.021658742736397254, 'eval_runtime': 83.2995, 'eval_samples_per_second': 11.597, 'eval_steps_per_second': 0.732, 'epoch': 14.0}
+{'loss': 0.0089, 'grad_norm': 10.306326866149902, 'learning_rate': 4.005181347150259e-07, 'epoch': 15.0}
+{'eval_loss': 0.16556240618228912, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.021394611727416798, 'eval_runtime': 83.2659, 'eval_samples_per_second': 11.601, 'eval_steps_per_second': 0.733, 'epoch': 15.0}
+{'loss': 0.0082, 'grad_norm': 3.7736451625823975, 'learning_rate': 3.605181347150259e-07, 'epoch': 16.0}
+{'eval_loss': 0.1680108606815338, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.02187484992556308, 'eval_runtime': 82.9401, 'eval_samples_per_second': 11.647, 'eval_steps_per_second': 0.735, 'epoch': 16.0}
+{'loss': 0.0068, 'grad_norm': 1.5103601217269897, 'learning_rate': 3.2051813471502585e-07, 'epoch': 17.0}
+{'eval_loss': 0.16922222077846527, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.022187004754358162, 'eval_runtime': 83.1826, 'eval_samples_per_second': 11.613, 'eval_steps_per_second': 0.733, 'epoch': 17.0}
+{'loss': 0.0062, 'grad_norm': 0.21182742714881897, 'learning_rate': 2.805181347150259e-07, 'epoch': 18.0}
+{'eval_loss': 0.1705944836139679, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.0212265283580656, 'eval_runtime': 82.9919, 'eval_samples_per_second': 11.64, 'eval_steps_per_second': 0.735, 'epoch': 18.0}
+{'loss': 0.0058, 'grad_norm': 0.2145298719406128, 'learning_rate': 2.4051813471502587e-07, 'epoch': 19.0}
+{'eval_loss': 0.16870170831680298, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.021562695096767996, 'eval_runtime': 83.314, 'eval_samples_per_second': 11.595, 'eval_steps_per_second': 0.732, 'epoch': 19.0}
+{'loss': 0.0059, 'grad_norm': 0.9910944700241089, 'learning_rate': 2.0062176165803109e-07, 'epoch': 20.0}
+{'eval_loss': 0.17107413709163666, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.02177880228593382, 'eval_runtime': 83.5373, 'eval_samples_per_second': 11.564, 'eval_steps_per_second': 0.73, 'epoch': 20.0}
+{'loss': 0.0057, 'grad_norm': 1.4251108169555664, 'learning_rate': 1.6062176165803107e-07, 'epoch': 21.0}
+{'eval_loss': 0.17161689698696136, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.021610718916582623, 'eval_runtime': 83.4298, 'eval_samples_per_second': 11.579, 'eval_steps_per_second': 0.731, 'epoch': 21.0}
+{'loss': 0.0051, 'grad_norm': 0.07395763695240021, 'learning_rate': 1.2062176165803108e-07, 'epoch': 22.0}
+{'eval_loss': 0.17270497977733612, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.021730778466119195, 'eval_runtime': 83.4975, 'eval_samples_per_second': 11.569, 'eval_steps_per_second': 0.731, 'epoch': 22.0}
+{'loss': 0.0048, 'grad_norm': 0.07483774423599243, 'learning_rate': 8.062176165803108e-08, 'epoch': 23.0}
+{'eval_loss': 0.17316122353076935, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.022042933294914278, 'eval_runtime': 83.6285, 'eval_samples_per_second': 11.551, 'eval_steps_per_second': 0.729, 'epoch': 23.0}
+{'loss': 0.0045, 'grad_norm': 0.8227058053016663, 'learning_rate': 4.062176165803108e-08, 'epoch': 24.0}
+{'eval_loss': 0.17343468964099884, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.02206694520482159, 'eval_runtime': 83.0779, 'eval_samples_per_second': 11.628, 'eval_steps_per_second': 0.734, 'epoch': 24.0}
+{'loss': 0.0044, 'grad_norm': 0.8095815181732178, 'learning_rate': 6.21761658031088e-10, 'epoch': 25.0}
+{'eval_loss': 0.17343658208847046, 'eval_model_preparation_time': 0.0046, 'eval_cer': 0.02216299284445085, 'eval_runtime': 83.5053, 'eval_samples_per_second': 11.568, 'eval_steps_per_second': 0.73, 'epoch': 25.0}
+There were missing keys in the checkpoint model loaded: ['decoder.output_projection.weight'].
+{'train_runtime': 6895.3715, 'train_samples_per_second': 22.337, 'train_steps_per_second': 1.399, 'train_loss': 0.05484896682087004, 'epoch': 25.0}
+Best val CER for awgn_150: 0.0205 at epoch /data/lmerta/checkpoints/finetune_iam/checkpoint-2702
+Processing Files (0 / 0)      : |          |  0.00B /  0.00B            
+New Data Upload               : |          |  0.00B /  0.00B            [A
+
+  ...am_awgn/model.safetensors:   5%|▍         | 63.9MB / 1.34GB            [A[A
+
+  ...am_awgn/model.safetensors:   5%|▍         | 63.9MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   5%|▍         | 63.9MB / 1.34GB,   ???B/s  
+
+  ...am_awgn/model.safetensors:   9%|▉         |  120MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   9%|▉         |  120MB / 1.34GB,   ???B/s  
+
+  ...am_awgn/model.safetensors:  13%|█▎        |  176MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  13%|█▎        |  176MB / 1.34GB, 16.9MB/s  
+
+  ...am_awgn/model.safetensors:  17%|█▋        |  232MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  17%|█▋        |  232MB / 1.34GB, 21.9MB/s  
+
+  ...am_awgn/model.safetensors:  22%|██▏       |  288MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  22%|██▏       |  288MB / 1.34GB, 26.8MB/s  
+
+  ...am_awgn/model.safetensors:  26%|██▌       |  344MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  26%|██▌       |  344MB / 1.34GB, 31.5MB/s  
+
+  ...am_awgn/model.safetensors:  29%|██▉       |  392MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  29%|██▉       |  392MB / 1.34GB, 35.3MB/s  
+
+  ...am_awgn/model.safetensors:  34%|███▎      |  448MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  34%|███▎      |  448MB / 1.34GB, 39.8MB/s  
+
+  ...am_awgn/model.safetensors:  38%|███▊      |  504MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  38%|███▊      |  504MB / 1.34GB, 44.1MB/s  
+
+  ...am_awgn/model.safetensors:  42%|████▏     |  560MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  42%|████▏     |  560MB / 1.34GB, 48.3MB/s  
+
+  ...am_awgn/model.safetensors:  46%|████▌     |  616MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  46%|████▌     |  616MB / 1.34GB, 52.4MB/s  
+
+  ...am_awgn/model.safetensors:  50%|█████     |  672MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  50%|█████     |  672MB / 1.34GB, 56.3MB/s  
+
+  ...am_awgn/model.safetensors:  54%|█████▍    |  728MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  54%|█████▍    |  728MB / 1.34GB, 60.1MB/s  
+
+  ...am_awgn/model.safetensors:  58%|█████▊    |  776MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  58%|█████▊    |  776MB / 1.34GB, 63.2MB/s  
+
+  ...am_awgn/model.safetensors:  62%|██████▏   |  832MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  62%|██████▏   |  832MB / 1.34GB, 66.8MB/s  
+
+  ...am_awgn/model.safetensors:  66%|██████▋   |  888MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  66%|██████▋   |  888MB / 1.34GB, 70.3MB/s  
+
+  ...am_awgn/model.safetensors:  71%|███████   |  944MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  71%|███████   |  944MB / 1.34GB, 73.8MB/s  
+
+  ...am_awgn/model.safetensors:  75%|███████▍  | 1.00GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  75%|███████▍  | 1.00GB / 1.34GB, 77.1MB/s  
+
+  ...am_awgn/model.safetensors:  79%|███████▉  | 1.06GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  79%|███████▉  | 1.06GB / 1.34GB, 80.4MB/s  
+
+  ...am_awgn/model.safetensors:  83%|████████▎ | 1.11GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  83%|████████▎ | 1.11GB / 1.34GB, 83.6MB/s  
+
+  ...am_awgn/model.safetensors:  87%|████████▋ | 1.17GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  87%|████████▋ | 1.17GB / 1.34GB, 86.6MB/s  
+
+  ...am_awgn/model.safetensors:  91%|█████████ | 1.22GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  91%|█████████ | 1.22GB / 1.34GB, 88.9MB/s  
+
+  ...am_awgn/model.safetensors:  95%|█████████▌| 1.27GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  95%|█████████▌| 1.27GB / 1.34GB, 91.9MB/s  
+
+  ...am_awgn/model.safetensors:  99%|█████████▉| 1.33GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  99%|█████████▉| 1.33GB / 1.34GB, 94.7MB/s  
+
+  ...am_awgn/model.safetensors: 100%|██████████| 1.34GB / 1.34GB            [A[AProcessing Files (1 / 1)      : 100%|██████████| 1.34GB / 1.34GB, 93.4MB/s  Processing Files (1 / 1)      : 100%|██████████| 1.34GB / 1.34GB, 93.4MB/s  
+New Data Upload               : |          |  0.00B /  0.00B,  0.00B/s  
+  ...am_awgn/model.safetensors: 100%|██████████| 1.34GB / 1.34GB            
+Training for: method=blur | intensity=3.0 
+Loading datasets...
+  Train: 6161 | Val: 966
+Preprocessing datasets...
+Some weights of VisionEncoderDecoderModel were not initialized from the model checkpoint at microsoft/trocr-base-handwritten and are newly initialized: ['encoder.pooler.dense.bias', 'encoder.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+{'eval_loss': 6.245184421539307, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.03450511453681026, 'eval_runtime': 78.7174, 'eval_samples_per_second': 12.272, 'eval_steps_per_second': 0.775}
+{'eval_loss': 6.245184421539307, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.03450511453681026, 'eval_runtime': 78.7174, 'eval_samples_per_second': 12.272, 'eval_steps_per_second': 0.775}
+Some weights of VisionEncoderDecoderModel were not initialized from the model checkpoint at microsoft/trocr-base-handwritten and are newly initialized: ['encoder.pooler.dense.bias', 'encoder.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+{'loss': 0.7756, 'grad_norm': 9.90321159362793, 'learning_rate': 9.607253886010363e-07, 'epoch': 1.0}
+{'eval_loss': 0.12715964019298553, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.012318109782452097, 'eval_runtime': 82.2313, 'eval_samples_per_second': 11.747, 'eval_steps_per_second': 0.742, 'epoch': 1.0}
+{'loss': 0.0675, 'grad_norm': 43.66623306274414, 'learning_rate': 9.207253886010362e-07, 'epoch': 2.0}
+{'eval_loss': 0.09315484762191772, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009844883061998752, 'eval_runtime': 82.8052, 'eval_samples_per_second': 11.666, 'eval_steps_per_second': 0.737, 'epoch': 2.0}
+{'loss': 0.0452, 'grad_norm': 0.125664621591568, 'learning_rate': 8.807253886010361e-07, 'epoch': 3.0}
+{'eval_loss': 0.08310648053884506, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.008692311386447679, 'eval_runtime': 82.6515, 'eval_samples_per_second': 11.688, 'eval_steps_per_second': 0.738, 'epoch': 3.0}
+{'loss': 0.0327, 'grad_norm': 3.150036573410034, 'learning_rate': 8.407253886010363e-07, 'epoch': 4.0}
+{'eval_loss': 0.07959924638271332, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.008788359026076935, 'eval_runtime': 83.0988, 'eval_samples_per_second': 11.625, 'eval_steps_per_second': 0.734, 'epoch': 4.0}
+{'loss': 0.0252, 'grad_norm': 0.6385179758071899, 'learning_rate': 8.007253886010363e-07, 'epoch': 5.0}
+{'eval_loss': 0.07633626461029053, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.008956442395428133, 'eval_runtime': 83.3682, 'eval_samples_per_second': 11.587, 'eval_steps_per_second': 0.732, 'epoch': 5.0}
+{'loss': 0.0204, 'grad_norm': 0.8503211736679077, 'learning_rate': 7.607253886010362e-07, 'epoch': 6.0}
+{'eval_loss': 0.07517451047897339, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.00840416846755991, 'eval_runtime': 82.9127, 'eval_samples_per_second': 11.651, 'eval_steps_per_second': 0.736, 'epoch': 6.0}
+{'loss': 0.0161, 'grad_norm': 0.18551677465438843, 'learning_rate': 7.207253886010363e-07, 'epoch': 7.0}
+{'eval_loss': 0.07736183702945709, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.008836382845891562, 'eval_runtime': 82.977, 'eval_samples_per_second': 11.642, 'eval_steps_per_second': 0.735, 'epoch': 7.0}
+{'loss': 0.0132, 'grad_norm': 0.20849665999412537, 'learning_rate': 6.807253886010362e-07, 'epoch': 8.0}
+{'eval_loss': 0.07837200164794922, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.008980454305335447, 'eval_runtime': 83.6134, 'eval_samples_per_second': 11.553, 'eval_steps_per_second': 0.73, 'epoch': 8.0}
+{'loss': 0.0116, 'grad_norm': 0.4819847643375397, 'learning_rate': 6.407253886010362e-07, 'epoch': 9.0}
+{'eval_loss': 0.0769495815038681, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.008380156557652596, 'eval_runtime': 83.2974, 'eval_samples_per_second': 11.597, 'eval_steps_per_second': 0.732, 'epoch': 9.0}
+{'loss': 0.0094, 'grad_norm': 2.0251576900482178, 'learning_rate': 6.007253886010363e-07, 'epoch': 10.0}
+{'eval_loss': 0.07866782695055008, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009028478125150074, 'eval_runtime': 83.2094, 'eval_samples_per_second': 11.609, 'eval_steps_per_second': 0.733, 'epoch': 10.0}
+{'loss': 0.0081, 'grad_norm': 1.9173530340194702, 'learning_rate': 5.607253886010362e-07, 'epoch': 11.0}
+{'eval_loss': 0.08006750792264938, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009052490035057389, 'eval_runtime': 83.3043, 'eval_samples_per_second': 11.596, 'eval_steps_per_second': 0.732, 'epoch': 11.0}
+{'loss': 0.0068, 'grad_norm': 5.266753673553467, 'learning_rate': 5.207253886010362e-07, 'epoch': 12.0}
+{'eval_loss': 0.08006928861141205, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009220573404408587, 'eval_runtime': 83.707, 'eval_samples_per_second': 11.54, 'eval_steps_per_second': 0.729, 'epoch': 12.0}
+{'loss': 0.0059, 'grad_norm': 2.7550718784332275, 'learning_rate': 4.807253886010363e-07, 'epoch': 13.0}
+{'eval_loss': 0.082421213388443, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009532728233203669, 'eval_runtime': 82.9014, 'eval_samples_per_second': 11.652, 'eval_steps_per_second': 0.736, 'epoch': 13.0}
+{'loss': 0.0054, 'grad_norm': 11.863884925842285, 'learning_rate': 4.4072538860103626e-07, 'epoch': 14.0}
+{'eval_loss': 0.08266441524028778, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009292609134130528, 'eval_runtime': 83.5857, 'eval_samples_per_second': 11.557, 'eval_steps_per_second': 0.73, 'epoch': 14.0}
+{'loss': 0.0049, 'grad_norm': 4.948322296142578, 'learning_rate': 4.007253886010363e-07, 'epoch': 15.0}
+{'eval_loss': 0.08352020382881165, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009628775872832925, 'eval_runtime': 83.3181, 'eval_samples_per_second': 11.594, 'eval_steps_per_second': 0.732, 'epoch': 15.0}
+{'loss': 0.0044, 'grad_norm': 5.683521270751953, 'learning_rate': 3.6072538860103624e-07, 'epoch': 16.0}
+{'eval_loss': 0.08412700146436691, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009556740143110982, 'eval_runtime': 83.0744, 'eval_samples_per_second': 11.628, 'eval_steps_per_second': 0.734, 'epoch': 16.0}
+{'loss': 0.0038, 'grad_norm': 1.1847189664840698, 'learning_rate': 3.2072538860103625e-07, 'epoch': 17.0}
+{'eval_loss': 0.0853840559720993, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009484704413389042, 'eval_runtime': 83.4556, 'eval_samples_per_second': 11.575, 'eval_steps_per_second': 0.731, 'epoch': 17.0}
+{'loss': 0.0039, 'grad_norm': 0.046218883246183395, 'learning_rate': 2.8072538860103626e-07, 'epoch': 18.0}
+{'eval_loss': 0.0872330442070961, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009868894971906066, 'eval_runtime': 83.6403, 'eval_samples_per_second': 11.549, 'eval_steps_per_second': 0.729, 'epoch': 18.0}
+{'loss': 0.0033, 'grad_norm': 0.2788567841053009, 'learning_rate': 2.4072538860103627e-07, 'epoch': 19.0}
+{'eval_loss': 0.08590107411146164, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009748835422369496, 'eval_runtime': 83.1337, 'eval_samples_per_second': 11.62, 'eval_steps_per_second': 0.734, 'epoch': 19.0}
+{'loss': 0.0032, 'grad_norm': 0.06326369196176529, 'learning_rate': 2.0072538860103626e-07, 'epoch': 20.0}
+{'eval_loss': 0.0873282179236412, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009940930701628008, 'eval_runtime': 82.8857, 'eval_samples_per_second': 11.655, 'eval_steps_per_second': 0.736, 'epoch': 20.0}
+{'loss': 0.0032, 'grad_norm': 0.2984876036643982, 'learning_rate': 1.6082901554404145e-07, 'epoch': 21.0}
+{'eval_loss': 0.08775565773248672, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009844883061998752, 'eval_runtime': 83.5612, 'eval_samples_per_second': 11.56, 'eval_steps_per_second': 0.73, 'epoch': 21.0}
+{'loss': 0.003, 'grad_norm': 0.09838055074214935, 'learning_rate': 1.2082901554404143e-07, 'epoch': 22.0}
+{'eval_loss': 0.08802856504917145, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009604763962925611, 'eval_runtime': 83.2682, 'eval_samples_per_second': 11.601, 'eval_steps_per_second': 0.733, 'epoch': 22.0}
+{'loss': 0.0029, 'grad_norm': 0.018621737137436867, 'learning_rate': 8.082901554404146e-08, 'epoch': 23.0}
+{'eval_loss': 0.08887264877557755, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.010229073620515776, 'eval_runtime': 83.0678, 'eval_samples_per_second': 11.629, 'eval_steps_per_second': 0.734, 'epoch': 23.0}
+{'loss': 0.0025, 'grad_norm': 0.4835934042930603, 'learning_rate': 4.082901554404145e-08, 'epoch': 24.0}
+{'eval_loss': 0.08841325342655182, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009844883061998752, 'eval_runtime': 82.9519, 'eval_samples_per_second': 11.645, 'eval_steps_per_second': 0.735, 'epoch': 24.0}
+{'loss': 0.0029, 'grad_norm': 0.6170302629470825, 'learning_rate': 8.290155440414507e-10, 'epoch': 25.0}
+{'eval_loss': 0.08847220242023468, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.010060990251164578, 'eval_runtime': 82.7621, 'eval_samples_per_second': 11.672, 'eval_steps_per_second': 0.737, 'epoch': 25.0}
+There were missing keys in the checkpoint model loaded: ['decoder.output_projection.weight'].
+{'train_runtime': 6902.7955, 'train_samples_per_second': 22.313, 'train_steps_per_second': 1.398, 'train_loss': 0.04323646552822133, 'epoch': 25.0}
+Best val CER for blur_3.0: 0.0084 at epoch /data/lmerta/checkpoints/finetune_iam/checkpoint-3474
+Processing Files (0 / 0)      : |          |  0.00B /  0.00B            
+New Data Upload               : |          |  0.00B /  0.00B            [A
+
+  ...am_blur/model.safetensors:   4%|▍         | 55.9MB / 1.34GB            [A[A
+
+  ...am_blur/model.safetensors:   4%|▍         | 55.9MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   4%|▍         | 55.9MB / 1.34GB,   ???B/s  
+
+  ...am_blur/model.safetensors:   8%|▊         |  112MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   8%|▊         |  112MB / 1.34GB,   ???B/s  
+
+  ...am_blur/model.safetensors:  13%|█▎        |  168MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  13%|█▎        |  168MB / 1.34GB, 16.1MB/s  
+
+  ...am_blur/model.safetensors:  17%|█▋        |  224MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  17%|█▋        |  224MB / 1.34GB, 21.2MB/s  
+
+  ...am_blur/model.safetensors:  21%|██        |  280MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  21%|██        |  280MB / 1.34GB, 26.1MB/s  
+
+  ...am_blur/model.safetensors:  25%|██▌       |  336MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  25%|██▌       |  336MB / 1.34GB, 30.8MB/s  
+
+  ...am_blur/model.safetensors:  29%|██▉       |  392MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  29%|██▉       |  392MB / 1.34GB, 35.4MB/s  
+
+  ...am_blur/model.safetensors:  34%|███▎      |  448MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  34%|███▎      |  448MB / 1.34GB, 39.8MB/s  
+
+  ...am_blur/model.safetensors:  37%|███▋      |  496MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  37%|███▋      |  496MB / 1.34GB, 43.4MB/s  
+
+  ...am_blur/model.safetensors:  42%|████▏     |  560MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  42%|████▏     |  560MB / 1.34GB, 48.4MB/s  
+
+  ...am_blur/model.safetensors:  46%|████▌     |  616MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  46%|████▌     |  616MB / 1.34GB, 52.4MB/s  
+
+  ...am_blur/model.safetensors:  50%|█████     |  672MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  50%|█████     |  672MB / 1.34GB, 56.4MB/s  
+
+  ...am_blur/model.safetensors:  54%|█████▍    |  728MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  54%|█████▍    |  728MB / 1.34GB, 60.2MB/s  
+
+  ...am_blur/model.safetensors:  59%|█████▊    |  784MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  59%|█████▊    |  784MB / 1.34GB, 64.0MB/s  
+
+  ...am_blur/model.safetensors:  62%|██████▏   |  832MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  62%|██████▏   |  832MB / 1.34GB, 66.9MB/s  
+
+  ...am_blur/model.safetensors:  66%|██████▋   |  888MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  66%|██████▋   |  888MB / 1.34GB, 70.4MB/s  
+
+  ...am_blur/model.safetensors:  71%|███████   |  944MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  71%|███████   |  944MB / 1.34GB, 73.8MB/s  
+
+  ...am_blur/model.safetensors:  75%|███████▍  | 1.00GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  75%|███████▍  | 1.00GB / 1.34GB, 77.2MB/s  
+
+  ...am_blur/model.safetensors:  79%|███████▉  | 1.06GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  79%|███████▉  | 1.06GB / 1.34GB, 80.4MB/s  
+
+  ...am_blur/model.safetensors:  83%|████████▎ | 1.11GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  83%|████████▎ | 1.11GB / 1.34GB, 83.6MB/s  
+
+  ...am_blur/model.safetensors:  87%|████████▋ | 1.17GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  87%|████████▋ | 1.17GB / 1.34GB, 86.7MB/s  
+
+  ...am_blur/model.safetensors:  92%|█████████▏| 1.22GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  92%|█████████▏| 1.22GB / 1.34GB, 89.7MB/s  
+
+  ...am_blur/model.safetensors:  96%|█████████▌| 1.28GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  96%|█████████▌| 1.28GB / 1.34GB, 92.6MB/s  
+
+  ...am_blur/model.safetensors: 100%|██████████| 1.34GB / 1.34GB            [A[AProcessing Files (1 / 1)      : 100%|██████████| 1.34GB / 1.34GB, 95.4MB/s  Processing Files (1 / 1)      : 100%|██████████| 1.34GB / 1.34GB, 95.4MB/s  
+New Data Upload               : |          |  0.00B /  0.00B,  0.00B/s  
+  ...am_blur/model.safetensors: 100%|██████████| 1.34GB / 1.34GB            
+Training for: method=jpeg_compression | intensity=1 
+Loading datasets...
+  Train: 6161 | Val: 966
+Preprocessing datasets...
+Some weights of VisionEncoderDecoderModel were not initialized from the model checkpoint at microsoft/trocr-base-handwritten and are newly initialized: ['encoder.pooler.dense.bias', 'encoder.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+{'eval_loss': 6.207635402679443, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.02177880228593382, 'eval_runtime': 78.8149, 'eval_samples_per_second': 12.257, 'eval_steps_per_second': 0.774}
+{'eval_loss': 6.207635402679443, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.02177880228593382, 'eval_runtime': 78.8149, 'eval_samples_per_second': 12.257, 'eval_steps_per_second': 0.774}
+Some weights of VisionEncoderDecoderModel were not initialized from the model checkpoint at microsoft/trocr-base-handwritten and are newly initialized: ['encoder.pooler.dense.bias', 'encoder.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+{'loss': 0.7627, 'grad_norm': 1.9109382629394531, 'learning_rate': 9.607253886010363e-07, 'epoch': 1.0}
+{'eval_loss': 0.11899654567241669, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.010877395188013254, 'eval_runtime': 82.6086, 'eval_samples_per_second': 11.694, 'eval_steps_per_second': 0.738, 'epoch': 1.0}
+{'loss': 0.0581, 'grad_norm': 54.70345687866211, 'learning_rate': 9.207253886010362e-07, 'epoch': 2.0}
+{'eval_loss': 0.08472923189401627, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.009196561494501272, 'eval_runtime': 82.6653, 'eval_samples_per_second': 11.686, 'eval_steps_per_second': 0.738, 'epoch': 2.0}
+{'loss': 0.0393, 'grad_norm': 0.03550638630986214, 'learning_rate': 8.807253886010361e-07, 'epoch': 3.0}
+{'eval_loss': 0.07602886855602264, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.00876434711616962, 'eval_runtime': 83.1606, 'eval_samples_per_second': 11.616, 'eval_steps_per_second': 0.734, 'epoch': 3.0}
+{'loss': 0.0288, 'grad_norm': 3.000094175338745, 'learning_rate': 8.407253886010363e-07, 'epoch': 4.0}
+{'eval_loss': 0.07266238331794739, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.008356144647745282, 'eval_runtime': 82.8237, 'eval_samples_per_second': 11.663, 'eval_steps_per_second': 0.737, 'epoch': 4.0}
+{'loss': 0.0226, 'grad_norm': 0.3215346038341522, 'learning_rate': 8.007253886010363e-07, 'epoch': 5.0}
+{'eval_loss': 0.07171501219272614, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.007803870719877059, 'eval_runtime': 82.9119, 'eval_samples_per_second': 11.651, 'eval_steps_per_second': 0.736, 'epoch': 5.0}
+{'loss': 0.018, 'grad_norm': 0.30756860971450806, 'learning_rate': 7.607253886010362e-07, 'epoch': 6.0}
+{'eval_loss': 0.07245390117168427, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.008092013638764828, 'eval_runtime': 82.7394, 'eval_samples_per_second': 11.675, 'eval_steps_per_second': 0.737, 'epoch': 6.0}
+{'loss': 0.0144, 'grad_norm': 0.07934832572937012, 'learning_rate': 7.207253886010363e-07, 'epoch': 7.0}
+{'eval_loss': 0.07525193691253662, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.008500216107189165, 'eval_runtime': 83.1348, 'eval_samples_per_second': 11.62, 'eval_steps_per_second': 0.734, 'epoch': 7.0}
+{'loss': 0.0118, 'grad_norm': 0.22198311984539032, 'learning_rate': 6.807253886010362e-07, 'epoch': 8.0}
+{'eval_loss': 0.07610158622264862, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.008356144647745282, 'eval_runtime': 83.248, 'eval_samples_per_second': 11.604, 'eval_steps_per_second': 0.733, 'epoch': 8.0}
+{'loss': 0.0097, 'grad_norm': 0.34333786368370056, 'learning_rate': 6.407253886010362e-07, 'epoch': 9.0}
+{'eval_loss': 0.07478933036327362, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.00828410891802334, 'eval_runtime': 83.6409, 'eval_samples_per_second': 11.549, 'eval_steps_per_second': 0.729, 'epoch': 9.0}
+{'loss': 0.0083, 'grad_norm': 1.270965337753296, 'learning_rate': 6.007253886010363e-07, 'epoch': 10.0}
+{'eval_loss': 0.07679254561662674, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.008116025548672141, 'eval_runtime': 83.3424, 'eval_samples_per_second': 11.591, 'eval_steps_per_second': 0.732, 'epoch': 10.0}
+{'loss': 0.0066, 'grad_norm': 0.7915611863136292, 'learning_rate': 5.607253886010362e-07, 'epoch': 11.0}
+{'eval_loss': 0.07754922658205032, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.008452192287374538, 'eval_runtime': 83.0784, 'eval_samples_per_second': 11.628, 'eval_steps_per_second': 0.734, 'epoch': 11.0}
+{'loss': 0.006, 'grad_norm': 3.5356366634368896, 'learning_rate': 5.207253886010362e-07, 'epoch': 12.0}
+{'eval_loss': 0.07807079702615738, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.008572251836911108, 'eval_runtime': 82.7798, 'eval_samples_per_second': 11.67, 'eval_steps_per_second': 0.737, 'epoch': 12.0}
+{'loss': 0.0054, 'grad_norm': 3.718761682510376, 'learning_rate': 4.807253886010363e-07, 'epoch': 13.0}
+{'eval_loss': 0.08056341856718063, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.008476204197281852, 'eval_runtime': 83.1643, 'eval_samples_per_second': 11.616, 'eval_steps_per_second': 0.733, 'epoch': 13.0}
+{'loss': 0.005, 'grad_norm': 7.341607093811035, 'learning_rate': 4.4072538860103626e-07, 'epoch': 14.0}
+{'eval_loss': 0.08134622871875763, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.00840416846755991, 'eval_runtime': 83.311, 'eval_samples_per_second': 11.595, 'eval_steps_per_second': 0.732, 'epoch': 14.0}
+{'loss': 0.0043, 'grad_norm': 4.1975555419921875, 'learning_rate': 4.007253886010363e-07, 'epoch': 15.0}
+{'eval_loss': 0.0822758749127388, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.008380156557652596, 'eval_runtime': 83.233, 'eval_samples_per_second': 11.606, 'eval_steps_per_second': 0.733, 'epoch': 15.0}
+{'loss': 0.0039, 'grad_norm': 3.6072399616241455, 'learning_rate': 3.6072538860103624e-07, 'epoch': 16.0}
+{'eval_loss': 0.08466629683971405, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.008596263746818421, 'eval_runtime': 83.477, 'eval_samples_per_second': 11.572, 'eval_steps_per_second': 0.731, 'epoch': 16.0}
+{'loss': 0.0035, 'grad_norm': 1.3513143062591553, 'learning_rate': 3.2072538860103625e-07, 'epoch': 17.0}
+{'eval_loss': 0.08504053205251694, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.008308120827930653, 'eval_runtime': 82.9406, 'eval_samples_per_second': 11.647, 'eval_steps_per_second': 0.735, 'epoch': 17.0}
+{'loss': 0.0032, 'grad_norm': 0.06255815923213959, 'learning_rate': 2.8072538860103626e-07, 'epoch': 18.0}
+{'eval_loss': 0.08780074864625931, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.00888440666570619, 'eval_runtime': 83.4366, 'eval_samples_per_second': 11.578, 'eval_steps_per_second': 0.731, 'epoch': 18.0}
+{'loss': 0.003, 'grad_norm': 0.33864355087280273, 'learning_rate': 2.4072538860103627e-07, 'epoch': 19.0}
+{'eval_loss': 0.08664223551750183, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.008548239927003794, 'eval_runtime': 83.0222, 'eval_samples_per_second': 11.635, 'eval_steps_per_second': 0.735, 'epoch': 19.0}
+{'loss': 0.0029, 'grad_norm': 0.08264768868684769, 'learning_rate': 2.0072538860103626e-07, 'epoch': 20.0}
+{'eval_loss': 0.08702345937490463, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.008836382845891562, 'eval_runtime': 83.2216, 'eval_samples_per_second': 11.608, 'eval_steps_per_second': 0.733, 'epoch': 20.0}
+{'loss': 0.0029, 'grad_norm': 1.430476188659668, 'learning_rate': 1.6072538860103627e-07, 'epoch': 21.0}
+{'eval_loss': 0.08646007627248764, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.008788359026076935, 'eval_runtime': 83.2167, 'eval_samples_per_second': 11.608, 'eval_steps_per_second': 0.733, 'epoch': 21.0}
+{'loss': 0.003, 'grad_norm': 0.04167364910244942, 'learning_rate': 1.2072538860103626e-07, 'epoch': 22.0}
+{'eval_loss': 0.08768297731876373, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.009100513854872016, 'eval_runtime': 82.9711, 'eval_samples_per_second': 11.643, 'eval_steps_per_second': 0.735, 'epoch': 22.0}
+{'loss': 0.0026, 'grad_norm': 0.03282623738050461, 'learning_rate': 8.072538860103627e-08, 'epoch': 23.0}
+{'eval_loss': 0.08810585737228394, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.008860394755798875, 'eval_runtime': 83.2954, 'eval_samples_per_second': 11.597, 'eval_steps_per_second': 0.732, 'epoch': 23.0}
+{'loss': 0.0024, 'grad_norm': 0.22024814784526825, 'learning_rate': 4.072538860103627e-08, 'epoch': 24.0}
+{'eval_loss': 0.08809884637594223, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.00900446621524276, 'eval_runtime': 83.0461, 'eval_samples_per_second': 11.632, 'eval_steps_per_second': 0.735, 'epoch': 24.0}
+{'loss': 0.0024, 'grad_norm': 0.46370089054107666, 'learning_rate': 7.253886010362694e-10, 'epoch': 25.0}
+{'eval_loss': 0.08813153952360153, 'eval_model_preparation_time': 0.005, 'eval_cer': 0.009076501944964703, 'eval_runtime': 83.3406, 'eval_samples_per_second': 11.591, 'eval_steps_per_second': 0.732, 'epoch': 25.0}
+There were missing keys in the checkpoint model loaded: ['decoder.output_projection.weight'].
+{'train_runtime': 6904.6882, 'train_samples_per_second': 22.307, 'train_steps_per_second': 1.398, 'train_loss': 0.04123323567173024, 'epoch': 25.0}
+Best val CER for jpeg_compression_1: 0.0078 at epoch /data/lmerta/checkpoints/finetune_iam/checkpoint-1930
+Processing Files (0 / 0)      : |          |  0.00B /  0.00B            
+New Data Upload               : |          |  0.00B /  0.00B            [A
+
+  ...ression/model.safetensors:   4%|▍         | 56.0MB / 1.34GB            [A[A
+
+  ...ression/model.safetensors:   4%|▍         | 56.0MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   4%|▍         | 56.0MB / 1.34GB,   ???B/s  
+
+  ...ression/model.safetensors:   8%|▊         |  112MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   8%|▊         |  112MB / 1.34GB,   ???B/s  
+
+  ...ression/model.safetensors:  13%|█▎        |  168MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  13%|█▎        |  168MB / 1.34GB, 16.1MB/s  
+
+  ...ression/model.safetensors:  17%|█▋        |  224MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  17%|█▋        |  224MB / 1.34GB, 21.2MB/s  
+
+  ...ression/model.safetensors:  22%|██▏       |  288MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  22%|██▏       |  288MB / 1.34GB, 26.8MB/s  
+
+  ...ression/model.safetensors:  26%|██▌       |  344MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  26%|██▌       |  344MB / 1.34GB, 31.5MB/s  
+
+  ...ression/model.safetensors:  30%|██▉       |  400MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  30%|██▉       |  400MB / 1.34GB, 36.1MB/s  
+
+  ...ression/model.safetensors:  34%|███▍      |  456MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  34%|███▍      |  456MB / 1.34GB, 40.6MB/s  
+
+  ...ression/model.safetensors:  38%|███▊      |  512MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  38%|███▊      |  512MB / 1.34GB, 44.9MB/s  
+
+  ...ression/model.safetensors:  43%|████▎     |  568MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  43%|████▎     |  568MB / 1.34GB, 49.0MB/s  
+
+  ...ression/model.safetensors:  47%|████▋     |  624MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  47%|████▋     |  624MB / 1.34GB, 53.1MB/s  
+
+  ...ression/model.safetensors:  51%|█████     |  680MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  51%|█████     |  680MB / 1.34GB, 57.0MB/s  
+
+  ...ression/model.safetensors:  55%|█████▌    |  736MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  55%|█████▌    |  736MB / 1.34GB, 60.9MB/s  
+
+  ...ression/model.safetensors:  59%|█████▉    |  792MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  59%|█████▉    |  792MB / 1.34GB, 64.6MB/s  
+
+  ...ression/model.safetensors:  63%|██████▎   |  848MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  63%|██████▎   |  848MB / 1.34GB, 68.2MB/s  
+
+  ...ression/model.safetensors:  68%|██████▊   |  912MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  68%|██████▊   |  912MB / 1.34GB, 72.4MB/s  
+
+  ...ression/model.safetensors:  72%|███████▏  |  968MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  72%|███████▏  |  968MB / 1.34GB, 75.8MB/s  
+
+  ...ression/model.safetensors:  77%|███████▋  | 1.02GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  77%|███████▋  | 1.02GB / 1.34GB, 79.1MB/s  
+
+  ...ression/model.safetensors:  81%|████████  | 1.08GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  81%|████████  | 1.08GB / 1.34GB, 82.3MB/s  
+
+  ...ression/model.safetensors:  85%|████████▌ | 1.14GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  85%|████████▌ | 1.14GB / 1.34GB, 85.4MB/s  
+
+  ...ression/model.safetensors:  89%|████████▉ | 1.19GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  89%|████████▉ | 1.19GB / 1.34GB, 88.5MB/s  
+
+  ...ression/model.safetensors:  93%|█████████▎| 1.25GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  93%|█████████▎| 1.25GB / 1.34GB, 91.4MB/s  
+
+  ...ression/model.safetensors:  98%|█████████▊| 1.30GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  98%|█████████▊| 1.30GB / 1.34GB, 94.3MB/s  
+
+  ...ression/model.safetensors: 100%|██████████| 1.34GB / 1.34GB            [A[AProcessing Files (1 / 1)      : 100%|██████████| 1.34GB / 1.34GB, 95.0MB/s  Processing Files (1 / 1)      : 100%|██████████| 1.34GB / 1.34GB, 95.0MB/s  
+New Data Upload               : |          |  0.00B /  0.00B,  0.00B/s  
+  ...ression/model.safetensors: 100%|██████████| 1.34GB / 1.34GB            
+Training for: method=downscale | intensity=0.25 
+Loading datasets...
+  Train: 6161 | Val: 966
+Preprocessing datasets...
+Some weights of VisionEncoderDecoderModel were not initialized from the model checkpoint at microsoft/trocr-base-handwritten and are newly initialized: ['encoder.pooler.dense.bias', 'encoder.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+{'eval_loss': 6.270146369934082, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.020650242520290064, 'eval_runtime': 79.0491, 'eval_samples_per_second': 12.22, 'eval_steps_per_second': 0.772}
+{'eval_loss': 6.270146369934082, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.020650242520290064, 'eval_runtime': 79.0491, 'eval_samples_per_second': 12.22, 'eval_steps_per_second': 0.772}
+Some weights of VisionEncoderDecoderModel were not initialized from the model checkpoint at microsoft/trocr-base-handwritten and are newly initialized: ['encoder.pooler.dense.bias', 'encoder.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+{'loss': 0.7568, 'grad_norm': 13.745757102966309, 'learning_rate': 9.60621761658031e-07, 'epoch': 1.0}
+{'eval_loss': 0.12074784934520721, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.00989290688181338, 'eval_runtime': 82.5229, 'eval_samples_per_second': 11.706, 'eval_steps_per_second': 0.739, 'epoch': 1.0}
+{'loss': 0.0582, 'grad_norm': 25.028648376464844, 'learning_rate': 9.206217616580311e-07, 'epoch': 2.0}
+{'eval_loss': 0.09241505712270737, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009580752053018298, 'eval_runtime': 82.8805, 'eval_samples_per_second': 11.655, 'eval_steps_per_second': 0.736, 'epoch': 2.0}
+{'loss': 0.0392, 'grad_norm': 0.11029988527297974, 'learning_rate': 8.80621761658031e-07, 'epoch': 3.0}
+{'eval_loss': 0.08328793942928314, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.00936464486385247, 'eval_runtime': 83.0271, 'eval_samples_per_second': 11.635, 'eval_steps_per_second': 0.735, 'epoch': 3.0}
+{'loss': 0.0291, 'grad_norm': 1.4950087070465088, 'learning_rate': 8.40621761658031e-07, 'epoch': 4.0}
+{'eval_loss': 0.08048991858959198, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009076501944964703, 'eval_runtime': 82.6961, 'eval_samples_per_second': 11.681, 'eval_steps_per_second': 0.738, 'epoch': 4.0}
+{'loss': 0.0226, 'grad_norm': 0.27377811074256897, 'learning_rate': 8.006217616580311e-07, 'epoch': 5.0}
+{'eval_loss': 0.08159711211919785, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009196561494501272, 'eval_runtime': 83.0014, 'eval_samples_per_second': 11.638, 'eval_steps_per_second': 0.735, 'epoch': 5.0}
+{'loss': 0.0178, 'grad_norm': 0.6890721917152405, 'learning_rate': 7.60621761658031e-07, 'epoch': 6.0}
+{'eval_loss': 0.07918084412813187, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.00900446621524276, 'eval_runtime': 83.025, 'eval_samples_per_second': 11.635, 'eval_steps_per_second': 0.735, 'epoch': 6.0}
+{'loss': 0.0147, 'grad_norm': 0.13120625913143158, 'learning_rate': 7.20621761658031e-07, 'epoch': 7.0}
+{'eval_loss': 0.08378738909959793, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009940930701628008, 'eval_runtime': 83.0773, 'eval_samples_per_second': 11.628, 'eval_steps_per_second': 0.734, 'epoch': 7.0}
+{'loss': 0.012, 'grad_norm': 0.2732369899749756, 'learning_rate': 6.80621761658031e-07, 'epoch': 8.0}
+{'eval_loss': 0.08475735038518906, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009940930701628008, 'eval_runtime': 83.0942, 'eval_samples_per_second': 11.625, 'eval_steps_per_second': 0.734, 'epoch': 8.0}
+{'loss': 0.0099, 'grad_norm': 0.5006572008132935, 'learning_rate': 6.406217616580311e-07, 'epoch': 9.0}
+{'eval_loss': 0.0829133689403534, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009316621044037843, 'eval_runtime': 83.2578, 'eval_samples_per_second': 11.603, 'eval_steps_per_second': 0.733, 'epoch': 9.0}
+{'loss': 0.0083, 'grad_norm': 2.1809661388397217, 'learning_rate': 6.006217616580311e-07, 'epoch': 10.0}
+{'eval_loss': 0.08396145701408386, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009796859242184123, 'eval_runtime': 82.8412, 'eval_samples_per_second': 11.661, 'eval_steps_per_second': 0.736, 'epoch': 10.0}
+{'loss': 0.0068, 'grad_norm': 1.9317538738250732, 'learning_rate': 5.606217616580311e-07, 'epoch': 11.0}
+{'eval_loss': 0.08404805511236191, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009580752053018298, 'eval_runtime': 83.3365, 'eval_samples_per_second': 11.592, 'eval_steps_per_second': 0.732, 'epoch': 11.0}
+{'loss': 0.0062, 'grad_norm': 2.6218647956848145, 'learning_rate': 5.206217616580311e-07, 'epoch': 12.0}
+{'eval_loss': 0.08405215293169022, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009628775872832925, 'eval_runtime': 83.2988, 'eval_samples_per_second': 11.597, 'eval_steps_per_second': 0.732, 'epoch': 12.0}
+{'loss': 0.0054, 'grad_norm': 2.3836510181427, 'learning_rate': 4.80621761658031e-07, 'epoch': 13.0}
+{'eval_loss': 0.08780764043331146, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009940930701628008, 'eval_runtime': 83.1463, 'eval_samples_per_second': 11.618, 'eval_steps_per_second': 0.734, 'epoch': 13.0}
+{'loss': 0.005, 'grad_norm': 2.686814308166504, 'learning_rate': 4.4062176165803106e-07, 'epoch': 14.0}
+{'eval_loss': 0.08806101232767105, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009940930701628008, 'eval_runtime': 83.07, 'eval_samples_per_second': 11.629, 'eval_steps_per_second': 0.734, 'epoch': 14.0}
+{'loss': 0.0046, 'grad_norm': 4.701040267944336, 'learning_rate': 4.006217616580311e-07, 'epoch': 15.0}
+{'eval_loss': 0.0889112800359726, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.010060990251164578, 'eval_runtime': 82.8307, 'eval_samples_per_second': 11.662, 'eval_steps_per_second': 0.736, 'epoch': 15.0}
+{'loss': 0.004, 'grad_norm': 2.982407808303833, 'learning_rate': 3.606217616580311e-07, 'epoch': 16.0}
+{'eval_loss': 0.09015325456857681, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.010109014070979206, 'eval_runtime': 82.9862, 'eval_samples_per_second': 11.64, 'eval_steps_per_second': 0.735, 'epoch': 16.0}
+{'loss': 0.004, 'grad_norm': 1.0937345027923584, 'learning_rate': 3.2062176165803105e-07, 'epoch': 17.0}
+{'eval_loss': 0.09146804362535477, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009820871152091437, 'eval_runtime': 83.1786, 'eval_samples_per_second': 11.614, 'eval_steps_per_second': 0.733, 'epoch': 17.0}
+{'loss': 0.0033, 'grad_norm': 0.04841852933168411, 'learning_rate': 2.8062176165803106e-07, 'epoch': 18.0}
+{'eval_loss': 0.09294703602790833, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.009748835422369496, 'eval_runtime': 83.1826, 'eval_samples_per_second': 11.613, 'eval_steps_per_second': 0.733, 'epoch': 18.0}
+{'loss': 0.0032, 'grad_norm': 0.11629458516836166, 'learning_rate': 2.4062176165803107e-07, 'epoch': 19.0}
+{'eval_loss': 0.09179241955280304, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.010036978341257264, 'eval_runtime': 82.9275, 'eval_samples_per_second': 11.649, 'eval_steps_per_second': 0.736, 'epoch': 19.0}
+{'loss': 0.0029, 'grad_norm': 0.28270336985588074, 'learning_rate': 2.0062176165803109e-07, 'epoch': 20.0}
+{'eval_loss': 0.09332045912742615, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.010277097440330405, 'eval_runtime': 83.215, 'eval_samples_per_second': 11.608, 'eval_steps_per_second': 0.733, 'epoch': 20.0}
+{'loss': 0.0028, 'grad_norm': 0.6725536584854126, 'learning_rate': 1.6062176165803107e-07, 'epoch': 21.0}
+{'eval_loss': 0.0930747240781784, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.010397156989866974, 'eval_runtime': 83.0025, 'eval_samples_per_second': 11.638, 'eval_steps_per_second': 0.735, 'epoch': 21.0}
+{'loss': 0.0031, 'grad_norm': 0.05620383098721504, 'learning_rate': 1.2062176165803108e-07, 'epoch': 22.0}
+{'eval_loss': 0.09396030753850937, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.01013302598088652, 'eval_runtime': 83.2163, 'eval_samples_per_second': 11.608, 'eval_steps_per_second': 0.733, 'epoch': 22.0}
+{'loss': 0.0026, 'grad_norm': 0.06017807126045227, 'learning_rate': 8.062176165803108e-08, 'epoch': 23.0}
+{'eval_loss': 0.09477155655622482, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.010325121260145032, 'eval_runtime': 82.9254, 'eval_samples_per_second': 11.649, 'eval_steps_per_second': 0.736, 'epoch': 23.0}
+{'loss': 0.0024, 'grad_norm': 1.122458815574646, 'learning_rate': 4.062176165803108e-08, 'epoch': 24.0}
+{'eval_loss': 0.09488168358802795, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.01013302598088652, 'eval_runtime': 83.1697, 'eval_samples_per_second': 11.615, 'eval_steps_per_second': 0.733, 'epoch': 24.0}
+{'loss': 0.0026, 'grad_norm': 0.6679590344429016, 'learning_rate': 7.253886010362694e-10, 'epoch': 25.0}
+{'eval_loss': 0.09478237479925156, 'eval_model_preparation_time': 0.0048, 'eval_cer': 0.010181049800701147, 'eval_runtime': 83.2884, 'eval_samples_per_second': 11.598, 'eval_steps_per_second': 0.732, 'epoch': 25.0}
+There were missing keys in the checkpoint model loaded: ['decoder.output_projection.weight'].
+{'train_runtime': 6904.6416, 'train_samples_per_second': 22.307, 'train_steps_per_second': 1.398, 'train_loss': 0.0411057677355455, 'epoch': 25.0}
+Best val CER for downscale_0.25: 0.0090 at epoch /data/lmerta/checkpoints/finetune_iam/checkpoint-2316
+Processing Files (0 / 0)      : |          |  0.00B /  0.00B            
+New Data Upload               : |          |  0.00B /  0.00B            [A
+
+  ...wnscale/model.safetensors:   5%|▌         | 72.0MB / 1.34GB            [A[A
+
+  ...wnscale/model.safetensors:   5%|▌         | 72.0MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   5%|▌         | 72.0MB / 1.34GB,   ???B/s  
+
+  ...wnscale/model.safetensors:  13%|█▎        |  176MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  13%|█▎        |  176MB / 1.34GB,   ???B/s  
+
+  ...wnscale/model.safetensors:  18%|█▊        |  240MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  18%|█▊        |  240MB / 1.34GB, 23.0MB/s  
+
+  ...wnscale/model.safetensors:  22%|██▏       |  296MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  22%|██▏       |  296MB / 1.34GB, 27.9MB/s  
+
+  ...wnscale/model.safetensors:  27%|██▋       |  360MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  27%|██▋       |  360MB / 1.34GB, 33.4MB/s  
+
+  ...wnscale/model.safetensors:  32%|███▏      |  424MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  32%|███▏      |  424MB / 1.34GB, 38.7MB/s  
+
+  ...wnscale/model.safetensors:  36%|███▌      |  480MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  36%|███▌      |  480MB / 1.34GB, 43.1MB/s  
+
+  ...wnscale/model.safetensors:  40%|████      |  536MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  40%|████      |  536MB / 1.34GB, 47.4MB/s  
+
+  ...wnscale/model.safetensors:  44%|████▍     |  592MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  44%|████▍     |  592MB / 1.34GB, 51.5MB/s  
+
+  ...wnscale/model.safetensors:  49%|████▉     |  656MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  49%|████▉     |  656MB / 1.34GB, 56.3MB/s  
+
+  ...wnscale/model.safetensors:  53%|█████▎    |  712MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  53%|█████▎    |  712MB / 1.34GB, 60.2MB/s  
+
+  ...wnscale/model.safetensors:  58%|█████▊    |  776MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  58%|█████▊    |  776MB / 1.34GB, 64.7MB/s  
+
+  ...wnscale/model.safetensors:  62%|██████▏   |  832MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  62%|██████▏   |  832MB / 1.34GB, 68.4MB/s  
+
+  ...wnscale/model.safetensors:  66%|██████▋   |  888MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  66%|██████▋   |  888MB / 1.34GB, 71.9MB/s  
+
+  ...wnscale/model.safetensors:  71%|███████▏  |  952MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  71%|███████▏  |  952MB / 1.34GB, 76.1MB/s  
+
+  ...wnscale/model.safetensors:  75%|███████▌  | 1.01GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  75%|███████▌  | 1.01GB / 1.34GB, 79.4MB/s  
+
+  ...wnscale/model.safetensors:  80%|███████▉  | 1.06GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  80%|███████▉  | 1.06GB / 1.34GB, 82.6MB/s  
+
+  ...wnscale/model.safetensors:  84%|████████▍ | 1.12GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  84%|████████▍ | 1.12GB / 1.34GB, 85.8MB/s  
+
+  ...wnscale/model.safetensors:  89%|████████▊ | 1.18GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  89%|████████▊ | 1.18GB / 1.34GB, 89.6MB/s  
+
+  ...wnscale/model.safetensors:  93%|█████████▎| 1.25GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  93%|█████████▎| 1.25GB / 1.34GB, 93.2MB/s  
+
+  ...wnscale/model.safetensors:  98%|█████████▊| 1.30GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  98%|█████████▊| 1.30GB / 1.34GB, 96.1MB/s  
+
+  ...wnscale/model.safetensors: 100%|██████████| 1.34GB / 1.34GB            [A[AProcessing Files (1 / 1)      : 100%|██████████| 1.34GB / 1.34GB, 96.8MB/s  Processing Files (1 / 1)      : 100%|██████████| 1.34GB / 1.34GB, 96.8MB/s  
+New Data Upload               : |          |  0.00B /  0.00B,  0.00B/s  
+  ...wnscale/model.safetensors: 100%|██████████| 1.34GB / 1.34GB            
+Finished Training for all degradation methods.

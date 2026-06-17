@@ -1,18 +1,23 @@
 """
-generate_degraded_iam_train.py
+generate_degraded_rimes_train.py
 
-Loads the IAM train and val set from HuggingFace, applies each degradation method
+Loads the RIMES train and val set from HuggingFace, applies each degradation method
 with one intensity level, and uploads the results as parquet files to HF.
 
 Each degraded set is saved under:
-    iam/<method>/train/<method>_<intensity>_train.parquet
-    iam/<method>/train/<method>_<intensity>_val.parquet
+    rimes/<method>/train/<method>_<intensity>_train.parquet
+    rimes/<method>/train/<method>_<intensity>_val.parquet
 """
 
+import os
 from pathlib import Path
 from datasets import Dataset, Features, Value, Image as HFImage
 from huggingface_hub import HfApi, file_exists
 from datasets import load_dataset
+from PIL import Image
+import io
+from huggingface_hub.utils import disable_progress_bars
+disable_progress_bars()
 
 import sys
 
@@ -39,15 +44,15 @@ api = HfApi()
 
 # Load raw train and val set
 
-print("Loading IAM train and val sets...")
+print("Loading RIMES train and val sets...")
 raw_train = load_dataset(
     "parquet",
-    data_files=f"hf://datasets/{HF_REPO_ID}/iam/raw/train.parquet",
+    data_files=f"hf://datasets/{HF_REPO_ID}/rimes/raw/train.parquet",
     split="train",
 )
 raw_val = load_dataset(
     "parquet",
-    data_files=f"hf://datasets/{HF_REPO_ID}/iam/raw/val.parquet",
+    data_files=f"hf://datasets/{HF_REPO_ID}/rimes/raw/validation.parquet",
     split="train",
 )
 print(f"  {len(raw_train)} samples in train set")
@@ -59,7 +64,7 @@ for method_name, method_fn, intensity in DEGRADATIONS:
     print(f"\n{method_name} | intensity={intensity}")
 
     # Degrade train set
-    target_path = f"iam/{method_name}/train/{method_name}_{intensity}_train.parquet"
+    target_path = f"rimes/{method_name}/train/{method_name}_{intensity}_train.parquet"
     if file_exists(repo_id=HF_REPO_ID, filename=target_path, repo_type="dataset"):
         print(f"  Train set already exists, skipping")
         continue
@@ -68,7 +73,7 @@ for method_name, method_fn, intensity in DEGRADATIONS:
 
     samples = []
     for sample in raw_train:
-        image = sample["image"].convert("RGB")
+        image = Image.open(io.BytesIO(sample["image"]["bytes"])).convert("RGB")
         degraded = method_fn(image, intensity)
         samples.append(
             {
@@ -88,7 +93,8 @@ for method_name, method_fn, intensity in DEGRADATIONS:
         ),
     )
 
-    local_path = Path(f"{method_name}_{intensity}_train.parquet")
+    local_path = Path(f"/data/{os.environ['USER']}/temp_parquet/{method_name}_{intensity}_train.parquet")
+    local_path.parent.mkdir(exist_ok=True)
     dataset.to_parquet(local_path)
 
     print(f"  Uploading to HF...")
@@ -103,7 +109,7 @@ for method_name, method_fn, intensity in DEGRADATIONS:
     print(f"  Done")
 
     # Degrade val set
-    target_path = f"iam/{method_name}/train/{method_name}_{intensity}_val.parquet"
+    target_path = f"rimes/{method_name}/train/{method_name}_{intensity}_val.parquet"
     if file_exists(repo_id=HF_REPO_ID, filename=target_path, repo_type="dataset"):
         print(f"  Val set already exists, skipping")
         continue
@@ -112,7 +118,7 @@ for method_name, method_fn, intensity in DEGRADATIONS:
 
     samples = []
     for sample in raw_val:
-        image = sample["image"].convert("RGB")
+        image = Image.open(io.BytesIO(sample["image"]["bytes"])).convert("RGB")
         degraded = method_fn(image, intensity)
         samples.append(
             {
@@ -132,7 +138,8 @@ for method_name, method_fn, intensity in DEGRADATIONS:
         ),
     )
 
-    local_path = Path(f"{method_name}_{intensity}_val.parquet")
+    local_path = Path(f"/data/{os.environ['USER']}/temp_parquet/{method_name}_{intensity}_val.parquet")
+    local_path.parent.mkdir(exist_ok=True)
     dataset.to_parquet(local_path)
 
     print(f"  Uploading to HF...")
