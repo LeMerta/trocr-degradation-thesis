@@ -63,20 +63,15 @@ def apply_jpeg_compression(image: Image.Image, quality: int) -> Image.Image:
     return Image.open(buffer).copy()
 
 
-def apply_downscaling(image: Image.Image, scale_factor: float) -> Image.Image:
+def apply_downscaling(image: Image.Image, target_height: int) -> Image.Image:
     """
-    Downscales an image then upscales it back to the original dimensions.
-
+    Downscales image to target_height then upscales back to original size.
+    
     Args:
-        image:        PIL Image converted to RGB.
-        scale_factor: Fraction of original dimensions to downscale to (0 < scale_factor < 1).
-                      Lower values produce stronger degradation.
-
-    Returns:
-        Degraded PIL Image at original dimensions.
+        image:         PIL Image converted to RGB.
+        target_height: Target height in pixels to downscale to 
     """
     original_size = image.size
+    scale_factor  = target_height / original_size[1]
     small_w = max(1, int(original_size[0] * scale_factor))
-    small_h = max(1, int(original_size[1] * scale_factor))
-    downscaled = image.resize((small_w, small_h), resample=Image.NEAREST)
-    return downscaled.resize(original_size, resample=Image.BICUBIC)
+    return image.resize((small_w, target_height), resample=Image.NEAREST)

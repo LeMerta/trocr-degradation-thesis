@@ -9,6 +9,7 @@ Each degraded set is saved under:
     iam/<method>/train/<method>_<intensity>_val.parquet
 """
 
+import os
 from pathlib import Path
 from datasets import Dataset, Features, Value, Image as HFImage
 from huggingface_hub import HfApi, file_exists
@@ -32,7 +33,7 @@ DEGRADATIONS = [
     ("awgn", apply_awgn, 150),
     ("blur", apply_gaussian_blur, 3.0),
     ("jpeg_compression", apply_jpeg_compression, 1),
-    ("downscale", apply_downscaling, 0.25),
+    ("downscale", apply_downscaling, 25),
 ]
 
 api = HfApi()
@@ -88,7 +89,7 @@ for method_name, method_fn, intensity in DEGRADATIONS:
         ),
     )
 
-    local_path = Path(f"{method_name}_{intensity}_train.parquet")
+    local_path = Path(f"/data/{os.environ['USER']}/parquets/{method_name}_{intensity}_train.parquet")
     dataset.to_parquet(local_path)
 
     print(f"  Uploading to HF...")
@@ -132,7 +133,7 @@ for method_name, method_fn, intensity in DEGRADATIONS:
         ),
     )
 
-    local_path = Path(f"{method_name}_{intensity}_val.parquet")
+    local_path = Path(f"/data/{os.environ['USER']}/parquets/{method_name}_{intensity}_val.parquet")
     dataset.to_parquet(local_path)
 
     print(f"  Uploading to HF...")

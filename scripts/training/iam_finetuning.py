@@ -51,7 +51,7 @@ DEGRADATIONS = [
     ("awgn", 150),
     ("blur", 3.0),
     ("jpeg_compression", 1),
-    ("downscale", 0.25),
+    ("downscale", 25),
 ]
 
 api = HfApi()
@@ -179,7 +179,7 @@ for method_name, intensity in DEGRADATIONS:
     # Train
     trainer.train()
     print(
-        f"Best val CER for {method_name}_{intensity}: {trainer.state.best_metric:.4f} at epoch {trainer.state.best_model_checkpoint}"
+        f"Best val CER for {method_name}_{intensity}: {trainer.state.best_metric:.4f}"
     )
 
     # Save model locally

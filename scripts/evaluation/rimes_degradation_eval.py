@@ -39,7 +39,7 @@ DEGRADATIONS = [
     ("awgn", [50, 100, 150, 200, 250]),
     ("blur", [1.0, 2.0, 3.0, 4.0, 5.0]),
     ("jpeg_compression", [10, 6, 3, 1]),
-    ("downscale", [0.4, 0.3, 0.25, 0.2, 0.175]),
+    ("downscale", [35, 30, 25, 20, 15]),
 ]
 
 # Check if CSV exists

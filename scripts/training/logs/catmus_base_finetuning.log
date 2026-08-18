@@ -1,0 +1,41 @@
+nohup: ignoring input
+Loading processor...
+/data/lmerta/venvs/myenv/lib/python3.9/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Training for CATMuS base model...
+Loading datasets...
+  Train: 152816 | Val: 19402
+Some weights of VisionEncoderDecoderModel were not initialized from the model checkpoint at microsoft/trocr-base-handwritten and are newly initialized: ['encoder.pooler.dense.bias', 'encoder.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+{'eval_loss': 12.526493072509766, 'eval_model_preparation_time': 0.0045, 'eval_cer': 0.777541301533144, 'eval_runtime': 3261.3659, 'eval_samples_per_second': 5.949, 'eval_steps_per_second': 1.487}
+{'eval_loss': 12.526493072509766, 'eval_model_preparation_time': 0.0045, 'eval_cer': 0.777541301533144, 'eval_runtime': 3261.3659, 'eval_samples_per_second': 5.949, 'eval_steps_per_second': 1.487}
+Some weights of VisionEncoderDecoderModel were not initialized from the model checkpoint at microsoft/trocr-base-handwritten and are newly initialized: ['encoder.pooler.dense.bias', 'encoder.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+{'loss': 0.9332, 'grad_norm': 21.39842414855957, 'learning_rate': 9.8e-07, 'epoch': 1.0}
+{'eval_loss': 0.7819030284881592, 'eval_model_preparation_time': 0.0045, 'eval_cer': 0.11616386136688209, 'eval_runtime': 5868.0451, 'eval_samples_per_second': 3.306, 'eval_steps_per_second': 0.827, 'epoch': 1.0}
+{'loss': 0.5152, 'grad_norm': 21.52964210510254, 'learning_rate': 9.6e-07, 'epoch': 2.0}
+{'eval_loss': 0.6894525289535522, 'eval_model_preparation_time': 0.0045, 'eval_cer': 0.10252032429969382, 'eval_runtime': 5780.2297, 'eval_samples_per_second': 3.357, 'eval_steps_per_second': 0.839, 'epoch': 2.0}
+{'loss': 0.4224, 'grad_norm': 20.330707550048828, 'learning_rate': 9.399999999999999e-07, 'epoch': 3.0}
+{'eval_loss': 0.6209535598754883, 'eval_model_preparation_time': 0.0045, 'eval_cer': 0.09374044910728674, 'eval_runtime': 5868.8571, 'eval_samples_per_second': 3.306, 'eval_steps_per_second': 0.827, 'epoch': 3.0}
+{'loss': 0.3679, 'grad_norm': 11.05093002319336, 'learning_rate': 9.2e-07, 'epoch': 4.0}
+{'eval_loss': 0.6042343974113464, 'eval_model_preparation_time': 0.0045, 'eval_cer': 0.09088560044899614, 'eval_runtime': 5990.7021, 'eval_samples_per_second': 3.239, 'eval_steps_per_second': 0.81, 'epoch': 4.0}
+{'loss': 0.3294, 'grad_norm': 11.054789543151855, 'learning_rate': 9e-07, 'epoch': 5.0}
+{'eval_loss': 0.588254988193512, 'eval_model_preparation_time': 0.0045, 'eval_cer': 0.0880057458170563, 'eval_runtime': 5939.3174, 'eval_samples_per_second': 3.267, 'eval_steps_per_second': 0.817, 'epoch': 5.0}
+{'loss': 0.2992, 'grad_norm': 14.03530502319336, 'learning_rate': 8.799999999999999e-07, 'epoch': 6.0}
+{'eval_loss': 0.5823028087615967, 'eval_model_preparation_time': 0.0045, 'eval_cer': 0.08604277688558934, 'eval_runtime': 6021.5142, 'eval_samples_per_second': 3.222, 'eval_steps_per_second': 0.806, 'epoch': 6.0}
+{'loss': 0.2739, 'grad_norm': 16.52645492553711, 'learning_rate': 8.599999999999999e-07, 'epoch': 7.0}
+{'eval_loss': 0.5717151165008545, 'eval_model_preparation_time': 0.0045, 'eval_cer': 0.08411731691459627, 'eval_runtime': 5870.2412, 'eval_samples_per_second': 3.305, 'eval_steps_per_second': 0.826, 'epoch': 7.0}
+{'loss': 0.2538, 'grad_norm': 19.654033660888672, 'learning_rate': 8.399999999999999e-07, 'epoch': 8.0}
+{'eval_loss': 0.5670828819274902, 'eval_model_preparation_time': 0.0045, 'eval_cer': 0.08254749745772601, 'eval_runtime': 5954.4642, 'eval_samples_per_second': 3.258, 'eval_steps_per_second': 0.815, 'epoch': 8.0}
+{'loss': 0.2351, 'grad_norm': 16.06096649169922, 'learning_rate': 8.199999999999999e-07, 'epoch': 9.0}
+{'eval_loss': 0.5680150389671326, 'eval_model_preparation_time': 0.0045, 'eval_cer': 0.08054563034502686, 'eval_runtime': 5884.602, 'eval_samples_per_second': 3.297, 'eval_steps_per_second': 0.824, 'epoch': 9.0}
+{'loss': 0.2187, 'grad_norm': 20.869522094726562, 'learning_rate': 8e-07, 'epoch': 10.0}
+{'eval_loss': 0.5742260217666626, 'eval_model_preparation_time': 0.0045, 'eval_cer': 0.08157365370616314, 'eval_runtime': 5853.7194, 'eval_samples_per_second': 3.314, 'eval_steps_per_second': 0.829, 'epoch': 10.0}
+{'loss': 0.2046, 'grad_norm': 75.3952407836914, 'learning_rate': 7.799999999999999e-07, 'epoch': 11.0}
+{'eval_loss': 0.5828873515129089, 'eval_model_preparation_time': 0.0045, 'eval_cer': 0.08074151047194608, 'eval_runtime': 5856.0504, 'eval_samples_per_second': 3.313, 'eval_steps_per_second': 0.828, 'epoch': 11.0}
+{'loss': 0.1907, 'grad_norm': 12.045071601867676, 'learning_rate': 7.599999999999999e-07, 'epoch': 12.0}
+{'eval_loss': 0.5836582779884338, 'eval_model_preparation_time': 0.0045, 'eval_cer': 0.08161533032891191, 'eval_runtime': 5854.6729, 'eval_samples_per_second': 3.314, 'eval_steps_per_second': 0.829, 'epoch': 12.0}
+There were missing keys in the checkpoint model loaded: ['decoder.output_projection.weight'].
+{'train_runtime': 185419.8422, 'train_samples_per_second': 41.208, 'train_steps_per_second': 10.302, 'train_loss': 0.35367670153396624, 'epoch': 12.0}
+Best val CER for CATMuS base model: 0.0805 
+Finished Training for CATMuS base model.

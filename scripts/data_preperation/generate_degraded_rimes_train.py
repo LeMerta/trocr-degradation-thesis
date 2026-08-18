@@ -37,7 +37,7 @@ DEGRADATIONS = [
     ("awgn", apply_awgn, 150),
     ("blur", apply_gaussian_blur, 3.0),
     ("jpeg_compression", apply_jpeg_compression, 1),
-    ("downscale", apply_downscaling, 0.25),
+    ("downscale", apply_downscaling, 25),
 ]
 
 api = HfApi()

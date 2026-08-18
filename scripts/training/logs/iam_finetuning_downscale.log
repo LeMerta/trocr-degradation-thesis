@@ -1,0 +1,481 @@
+nohup: ignoring input
+Loading processor...
+/data/lmerta/venvs/myenv/lib/python3.9/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Training for: method=downscale | intensity=25 
+Loading datasets...
+  Train: 6161 | Val: 966
+Preprocessing datasets...
+Map:   0%|          | 0/966 [00:00<?, ? examples/s]Map: 100%|██████████| 966/966 [00:08<00:00, 120.55 examples/s]Map: 100%|██████████| 966/966 [00:18<00:00, 52.50 examples/s] 
+Some weights of VisionEncoderDecoderModel were not initialized from the model checkpoint at microsoft/trocr-base-handwritten and are newly initialized: ['encoder.pooler.dense.bias', 'encoder.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+{'eval_loss': 6.222018241882324, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.0679537050376987, 'eval_runtime': 79.748, 'eval_samples_per_second': 12.113, 'eval_steps_per_second': 0.765}
+{'eval_loss': 6.222018241882324, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.0679537050376987, 'eval_runtime': 79.748, 'eval_samples_per_second': 12.113, 'eval_steps_per_second': 0.765}
+Some weights of VisionEncoderDecoderModel were not initialized from the model checkpoint at microsoft/trocr-base-handwritten and are newly initialized: ['encoder.pooler.dense.bias', 'encoder.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+{'loss': 0.8516, 'grad_norm': 130.025634765625, 'learning_rate': 9.607253886010363e-07, 'epoch': 1.0}
+{'eval_loss': 0.17313474416732788, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.017504682322431925, 'eval_runtime': 81.6061, 'eval_samples_per_second': 11.837, 'eval_steps_per_second': 0.747, 'epoch': 1.0}
+{'loss': 0.1197, 'grad_norm': 34.57071304321289, 'learning_rate': 9.207253886010362e-07, 'epoch': 2.0}
+{'eval_loss': 0.13172297179698944, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.016664265475675934, 'eval_runtime': 81.8556, 'eval_samples_per_second': 11.801, 'eval_steps_per_second': 0.745, 'epoch': 2.0}
+{'loss': 0.0871, 'grad_norm': 0.09361941367387772, 'learning_rate': 8.807253886010361e-07, 'epoch': 3.0}
+{'eval_loss': 0.11733554303646088, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.015103491331700523, 'eval_runtime': 83.1962, 'eval_samples_per_second': 11.611, 'eval_steps_per_second': 0.733, 'epoch': 3.0}
+{'loss': 0.066, 'grad_norm': 1.1935139894485474, 'learning_rate': 8.407253886010363e-07, 'epoch': 4.0}
+{'eval_loss': 0.11433304101228714, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.015175527061422465, 'eval_runtime': 82.8976, 'eval_samples_per_second': 11.653, 'eval_steps_per_second': 0.736, 'epoch': 4.0}
+{'loss': 0.0528, 'grad_norm': 0.32742366194725037, 'learning_rate': 8.007253886010363e-07, 'epoch': 5.0}
+{'eval_loss': 0.1129990667104721, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.014839360322720069, 'eval_runtime': 83.0802, 'eval_samples_per_second': 11.627, 'eval_steps_per_second': 0.734, 'epoch': 5.0}
+{'loss': 0.0426, 'grad_norm': 0.7734454870223999, 'learning_rate': 7.607253886010362e-07, 'epoch': 6.0}
+{'eval_loss': 0.1110309585928917, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.014335110214666475, 'eval_runtime': 83.4743, 'eval_samples_per_second': 11.572, 'eval_steps_per_second': 0.731, 'epoch': 6.0}
+{'loss': 0.0348, 'grad_norm': 0.272732138633728, 'learning_rate': 7.207253886010363e-07, 'epoch': 7.0}
+{'eval_loss': 0.1132037565112114, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.014791336502905442, 'eval_runtime': 83.35, 'eval_samples_per_second': 11.59, 'eval_steps_per_second': 0.732, 'epoch': 7.0}
+{'loss': 0.0288, 'grad_norm': 0.12974373996257782, 'learning_rate': 6.807253886010362e-07, 'epoch': 8.0}
+{'eval_loss': 0.11725091189146042, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.014983431782163954, 'eval_runtime': 83.4896, 'eval_samples_per_second': 11.57, 'eval_steps_per_second': 0.731, 'epoch': 8.0}
+{'loss': 0.024, 'grad_norm': 0.6670029759407043, 'learning_rate': 6.407253886010362e-07, 'epoch': 9.0}
+{'eval_loss': 0.11519324779510498, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.01507947942179321, 'eval_runtime': 83.5501, 'eval_samples_per_second': 11.562, 'eval_steps_per_second': 0.73, 'epoch': 9.0}
+{'loss': 0.0202, 'grad_norm': 4.063122749328613, 'learning_rate': 6.007253886010363e-07, 'epoch': 10.0}
+{'eval_loss': 0.11845614016056061, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.015511693800124862, 'eval_runtime': 83.6149, 'eval_samples_per_second': 11.553, 'eval_steps_per_second': 0.73, 'epoch': 10.0}
+{'loss': 0.017, 'grad_norm': 2.457909345626831, 'learning_rate': 5.607253886010362e-07, 'epoch': 11.0}
+{'eval_loss': 0.11950650066137314, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.014791336502905442, 'eval_runtime': 83.4025, 'eval_samples_per_second': 11.582, 'eval_steps_per_second': 0.731, 'epoch': 11.0}
+{'loss': 0.0151, 'grad_norm': 8.056620597839355, 'learning_rate': 5.207253886010362e-07, 'epoch': 12.0}
+{'eval_loss': 0.11672960966825485, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.014791336502905442, 'eval_runtime': 84.1225, 'eval_samples_per_second': 11.483, 'eval_steps_per_second': 0.725, 'epoch': 12.0}
+{'loss': 0.013, 'grad_norm': 6.520776748657227, 'learning_rate': 4.807253886010363e-07, 'epoch': 13.0}
+{'eval_loss': 0.12028805166482925, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.015535705710032176, 'eval_runtime': 83.5462, 'eval_samples_per_second': 11.562, 'eval_steps_per_second': 0.73, 'epoch': 13.0}
+{'loss': 0.0112, 'grad_norm': 15.749832153320312, 'learning_rate': 4.4072538860103626e-07, 'epoch': 14.0}
+{'eval_loss': 0.1216568797826767, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.015415646160495606, 'eval_runtime': 83.6191, 'eval_samples_per_second': 11.552, 'eval_steps_per_second': 0.729, 'epoch': 14.0}
+{'loss': 0.0102, 'grad_norm': 5.681895732879639, 'learning_rate': 4.007253886010363e-07, 'epoch': 15.0}
+{'eval_loss': 0.12148448079824448, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.015703789079383374, 'eval_runtime': 83.5529, 'eval_samples_per_second': 11.562, 'eval_steps_per_second': 0.73, 'epoch': 15.0}
+{'loss': 0.009, 'grad_norm': 3.7508344650268555, 'learning_rate': 3.6072538860103624e-07, 'epoch': 16.0}
+{'eval_loss': 0.12306059896945953, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.014839360322720069, 'eval_runtime': 84.2205, 'eval_samples_per_second': 11.47, 'eval_steps_per_second': 0.724, 'epoch': 16.0}
+{'loss': 0.008, 'grad_norm': 3.9393184185028076, 'learning_rate': 3.2072538860103625e-07, 'epoch': 17.0}
+{'eval_loss': 0.12435852736234665, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.015535705710032176, 'eval_runtime': 84.0099, 'eval_samples_per_second': 11.499, 'eval_steps_per_second': 0.726, 'epoch': 17.0}
+{'loss': 0.0077, 'grad_norm': 0.17632079124450684, 'learning_rate': 2.8072538860103626e-07, 'epoch': 18.0}
+{'eval_loss': 0.1253218948841095, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.01611199154780771, 'eval_runtime': 83.6398, 'eval_samples_per_second': 11.55, 'eval_steps_per_second': 0.729, 'epoch': 18.0}
+{'loss': 0.0069, 'grad_norm': 1.715036153793335, 'learning_rate': 2.4072538860103627e-07, 'epoch': 19.0}
+{'eval_loss': 0.12501923739910126, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.015607741439754118, 'eval_runtime': 83.6155, 'eval_samples_per_second': 11.553, 'eval_steps_per_second': 0.73, 'epoch': 19.0}
+{'loss': 0.0063, 'grad_norm': 0.08938372880220413, 'learning_rate': 2.0072538860103626e-07, 'epoch': 20.0}
+{'eval_loss': 0.12622536718845367, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.01611199154780771, 'eval_runtime': 83.9822, 'eval_samples_per_second': 11.502, 'eval_steps_per_second': 0.726, 'epoch': 20.0}
+{'loss': 0.006, 'grad_norm': 1.0275688171386719, 'learning_rate': 1.6072538860103627e-07, 'epoch': 21.0}
+{'eval_loss': 0.1270018368959427, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.016184027277529656, 'eval_runtime': 83.6177, 'eval_samples_per_second': 11.553, 'eval_steps_per_second': 0.73, 'epoch': 21.0}
+{'loss': 0.0059, 'grad_norm': 0.08187452703714371, 'learning_rate': 1.2072538860103626e-07, 'epoch': 22.0}
+{'eval_loss': 0.12773123383522034, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.016376122556788168, 'eval_runtime': 83.7779, 'eval_samples_per_second': 11.53, 'eval_steps_per_second': 0.728, 'epoch': 22.0}
+{'loss': 0.0058, 'grad_norm': 0.03027697093784809, 'learning_rate': 8.072538860103627e-08, 'epoch': 23.0}
+{'eval_loss': 0.12778235971927643, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.016015943908178457, 'eval_runtime': 83.6318, 'eval_samples_per_second': 11.551, 'eval_steps_per_second': 0.729, 'epoch': 23.0}
+{'loss': 0.0053, 'grad_norm': 2.19226336479187, 'learning_rate': 4.072538860103627e-08, 'epoch': 24.0}
+{'eval_loss': 0.12838654220104218, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.016304086827066223, 'eval_runtime': 83.9093, 'eval_samples_per_second': 11.512, 'eval_steps_per_second': 0.727, 'epoch': 24.0}
+{'loss': 0.0053, 'grad_norm': 2.308971405029297, 'learning_rate': 7.253886010362694e-10, 'epoch': 25.0}
+{'eval_loss': 0.12835483253002167, 'eval_model_preparation_time': 0.0044, 'eval_cer': 0.016304086827066223, 'eval_runtime': 83.8392, 'eval_samples_per_second': 11.522, 'eval_steps_per_second': 0.728, 'epoch': 25.0}
+There were missing keys in the checkpoint model loaded: ['decoder.output_projection.weight'].
+{'train_runtime': 6967.419, 'train_samples_per_second': 22.106, 'train_steps_per_second': 1.385, 'train_loss': 0.058407441420876303, 'epoch': 25.0}
+Best val CER for downscale_25: 0.0143
+Processing Files (0 / 0)      : |          |  0.00B /  0.00B            
+New Data Upload               : |          |  0.00B /  0.00B            [A
+
+  ...wnscale/model.safetensors:   0%|          | 1.91MB / 1.34GB            [A[A
+
+  ...wnscale/model.safetensors:   0%|          | 1.91MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   0%|          | 1.91MB / 1.34GB,  183kB/s  
+
+  ...wnscale/model.safetensors:   0%|          | 2.46MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   0%|          | 2.46MB / 1.34GB,  231kB/s  
+New Data Upload               :   1%|          |  553kB / 67.1MB, 52.5kB/s  [A
+
+  ...wnscale/model.safetensors:   0%|          | 2.46MB / 1.34GB            [A[A
+
+  ...wnscale/model.safetensors:   0%|          | 3.02MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   0%|          | 3.02MB / 1.34GB,  267kB/s  
+New Data Upload               :   1%|          | 1.11MB /  134MB,  101kB/s  [A
+
+  ...wnscale/model.safetensors:   0%|          | 5.78MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   0%|          | 5.78MB / 1.34GB,  517kB/s  
+New Data Upload               :   2%|▏         | 3.87MB /  201MB,  354kB/s  [A
+
+  ...wnscale/model.safetensors:   1%|          | 9.65MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   1%|          | 9.65MB / 1.34GB,  862kB/s  
+New Data Upload               :   4%|▍         | 7.74MB /  201MB,  703kB/s  [A
+
+  ...wnscale/model.safetensors:   1%|          | 15.7MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   1%|          | 15.7MB / 1.34GB, 1.40MB/s  
+New Data Upload               :   7%|▋         | 13.8MB /  201MB, 1.24MB/s  [A
+
+  ...wnscale/model.safetensors:   2%|▏         | 24.6MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   2%|▏         | 24.6MB / 1.34GB, 2.17MB/s  
+New Data Upload               :  11%|█▏        | 22.7MB /  201MB, 2.02MB/s  [A
+
+  ...wnscale/model.safetensors:   2%|▏         | 31.8MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   2%|▏         | 31.8MB / 1.34GB, 2.78MB/s  
+New Data Upload               :  15%|█▍        | 29.9MB /  201MB, 2.63MB/s  [A
+
+  ...wnscale/model.safetensors:   3%|▎         | 41.7MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   3%|▎         | 41.7MB / 1.34GB, 3.61MB/s  
+New Data Upload               :  20%|█▉        | 39.8MB /  201MB, 3.47MB/s  [A
+
+  ...wnscale/model.safetensors:   4%|▎         | 50.0MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   4%|▎         | 50.0MB / 1.34GB, 4.27MB/s  
+New Data Upload               :  24%|██▍       | 48.1MB /  201MB, 4.13MB/s  [A
+
+  ...wnscale/model.safetensors:   4%|▍         | 57.8MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   4%|▍         | 57.8MB / 1.34GB, 4.87MB/s  
+New Data Upload               :  28%|██▊       | 55.9MB /  201MB, 4.73MB/s  [A
+
+  ...wnscale/model.safetensors:   5%|▌         | 68.8MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   5%|▌         | 68.8MB / 1.34GB, 5.74MB/s  
+New Data Upload               :  33%|███▎      | 66.9MB /  201MB, 5.60MB/s  [A
+
+  ...wnscale/model.safetensors:   6%|▌         | 76.0MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   6%|▌         | 76.0MB / 1.34GB, 6.25MB/s  
+New Data Upload               :  37%|███▋      | 74.1MB /  201MB, 6.12MB/s  [A
+
+  ...wnscale/model.safetensors:   6%|▌         | 82.1MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   6%|▌         | 82.1MB / 1.34GB, 6.65MB/s  
+New Data Upload               :  40%|███▉      | 80.2MB /  201MB, 6.52MB/s  [A
+
+  ...wnscale/model.safetensors:   6%|▋         | 86.5MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   6%|▋         | 86.5MB / 1.34GB, 6.89MB/s  
+New Data Upload               :  42%|████▏     | 84.6MB /  201MB, 6.76MB/s  [A
+
+  ...wnscale/model.safetensors:   7%|▋         | 89.3MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   7%|▋         | 89.3MB / 1.34GB, 6.98MB/s  
+New Data Upload               :  43%|████▎     | 87.4MB /  201MB, 6.85MB/s  [A
+
+  ...wnscale/model.safetensors:   7%|▋         | 94.3MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   7%|▋         | 94.3MB / 1.34GB, 7.26MB/s  
+New Data Upload               :  46%|████▌     | 92.4MB /  201MB, 7.14MB/s  [A
+
+  ...wnscale/model.safetensors:   8%|▊         |  104MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   8%|▊         |  104MB / 1.34GB, 7.92MB/s  
+New Data Upload               :  38%|███▊      |  102MB /  268MB, 7.81MB/s  [A
+
+  ...wnscale/model.safetensors:   9%|▉         |  118MB / 1.34GB            [A[AProcessing Files (0 / 1)      :   9%|▉         |  118MB / 1.34GB, 8.94MB/s  
+New Data Upload               :  43%|████▎     |  116MB /  268MB, 8.82MB/s  [A
+
+  ...wnscale/model.safetensors:  10%|▉         |  131MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  10%|▉         |  131MB / 1.34GB, 9.88MB/s  
+New Data Upload               :  48%|████▊     |  129MB /  268MB, 9.77MB/s  [A
+
+  ...wnscale/model.safetensors:  11%|█         |  149MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  11%|█         |  149MB / 1.34GB, 11.2MB/s  
+New Data Upload               :  44%|████▍     |  147MB /  335MB, 11.1MB/s  [A
+
+  ...wnscale/model.safetensors:  13%|█▎        |  167MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  13%|█▎        |  167MB / 1.34GB, 12.5MB/s  
+New Data Upload               :  41%|████      |  166MB /  402MB, 12.4MB/s  [A
+
+  ...wnscale/model.safetensors:  14%|█▍        |  184MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  14%|█▍        |  184MB / 1.34GB, 13.7MB/s  
+New Data Upload               :  39%|███▉      |  182MB /  469MB, 13.6MB/s  [A
+
+  ...wnscale/model.safetensors:  15%|█▍        |  195MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  15%|█▍        |  195MB / 1.34GB, 14.3MB/s  
+New Data Upload               :  41%|████      |  193MB /  469MB, 14.2MB/s  [A
+
+  ...wnscale/model.safetensors:  15%|█▌        |  205MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  15%|█▌        |  205MB / 1.34GB, 14.9MB/s  
+New Data Upload               :  43%|████▎     |  203MB /  469MB, 14.8MB/s  [A
+
+  ...wnscale/model.safetensors:  16%|█▋        |  217MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  16%|█▋        |  217MB / 1.34GB, 15.6MB/s  
+New Data Upload               :  46%|████▌     |  215MB /  469MB, 15.5MB/s  [A
+
+  ...wnscale/model.safetensors:  17%|█▋        |  232MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  17%|█▋        |  232MB / 1.34GB, 16.5MB/s  
+New Data Upload               :  43%|████▎     |  230MB /  536MB, 16.4MB/s  [A
+
+  ...wnscale/model.safetensors:  19%|█▊        |  249MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  19%|█▊        |  249MB / 1.34GB, 17.5MB/s  
+New Data Upload               :  41%|████      |  247MB /  604MB, 17.4MB/s  [A
+
+  ...wnscale/model.safetensors:  19%|█▉        |  260MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  19%|█▉        |  260MB / 1.34GB, 18.1MB/s  
+New Data Upload               :  43%|████▎     |  258MB /  604MB, 18.0MB/s  [A
+
+  ...wnscale/model.safetensors:  21%|██        |  274MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  21%|██        |  274MB / 1.34GB, 18.9MB/s  
+New Data Upload               :  41%|████      |  273MB /  671MB, 18.8MB/s  [A
+
+  ...wnscale/model.safetensors:  22%|██▏       |  293MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  22%|██▏       |  293MB / 1.34GB, 20.0MB/s  
+New Data Upload               :  43%|████▎     |  291MB /  671MB, 19.9MB/s  [A
+
+  ...wnscale/model.safetensors:  23%|██▎       |  308MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  23%|██▎       |  308MB / 1.34GB, 20.8MB/s  
+New Data Upload               :  46%|████▌     |  306MB /  671MB, 20.7MB/s  [A
+
+  ...wnscale/model.safetensors:  24%|██▍       |  323MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  24%|██▍       |  323MB / 1.34GB, 21.6MB/s  
+New Data Upload               :  44%|████▎     |  321MB /  738MB, 21.5MB/s  [A
+
+  ...wnscale/model.safetensors:  26%|██▌       |  341MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  26%|██▌       |  341MB / 1.34GB, 22.7MB/s  
+New Data Upload               :  46%|████▌     |  339MB /  738MB, 22.6MB/s  [A
+
+  ...wnscale/model.safetensors:  27%|██▋       |  358MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  27%|██▋       |  358MB / 1.34GB, 23.6MB/s  
+New Data Upload               :  44%|████▍     |  356MB /  805MB, 23.5MB/s  [A
+
+  ...wnscale/model.safetensors:  28%|██▊       |  377MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  28%|██▊       |  377MB / 1.34GB, 24.6MB/s  
+New Data Upload               :  47%|████▋     |  375MB /  805MB, 24.5MB/s  [A
+
+  ...wnscale/model.safetensors:  30%|██▉       |  396MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  30%|██▉       |  396MB / 1.34GB, 25.7MB/s  
+New Data Upload               :  45%|████▌     |  394MB /  872MB, 25.6MB/s  [A
+
+  ...wnscale/model.safetensors:  31%|███       |  415MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  31%|███       |  415MB / 1.34GB, 26.7MB/s  
+New Data Upload               :  47%|████▋     |  413MB /  872MB, 26.6MB/s  [A
+
+  ...wnscale/model.safetensors:  32%|███▏      |  430MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  32%|███▏      |  430MB / 1.34GB, 27.4MB/s  
+New Data Upload               :  46%|████▌     |  428MB /  939MB, 27.3MB/s  [A
+
+  ...wnscale/model.safetensors:  33%|███▎      |  445MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  33%|███▎      |  445MB / 1.34GB, 28.0MB/s  
+New Data Upload               :  47%|████▋     |  443MB /  939MB, 27.9MB/s  [A
+
+  ...wnscale/model.safetensors:  35%|███▌      |  470MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  35%|███▌      |  470MB / 1.34GB, 29.5MB/s  
+New Data Upload               :  47%|████▋     |  468MB / 1.01GB, 29.4MB/s  [A
+
+  ...wnscale/model.safetensors:  37%|███▋      |  500MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  37%|███▋      |  500MB / 1.34GB, 31.2MB/s  
+New Data Upload               :  49%|████▉     |  498MB / 1.01GB, 31.1MB/s  [A
+
+  ...wnscale/model.safetensors:  39%|███▉      |  524MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  39%|███▉      |  524MB / 1.34GB, 32.5MB/s  
+New Data Upload               :  49%|████▊     |  522MB / 1.07GB, 32.4MB/s  [A
+
+  ...wnscale/model.safetensors:  42%|████▏     |  558MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  42%|████▏     |  558MB / 1.34GB, 34.6MB/s  
+New Data Upload               :  49%|████▉     |  556MB / 1.14GB, 34.5MB/s  [A
+
+  ...wnscale/model.safetensors:  44%|████▍     |  588MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  44%|████▍     |  588MB / 1.34GB, 36.2MB/s  
+New Data Upload               :  49%|████▊     |  586MB / 1.21GB, 36.2MB/s  [A
+
+  ...wnscale/model.safetensors:  46%|████▌     |  618MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  46%|████▌     |  618MB / 1.34GB, 37.8MB/s  
+New Data Upload               :  48%|████▊     |  616MB / 1.27GB, 37.8MB/s  [A
+
+  ...wnscale/model.safetensors:  49%|████▉     |  654MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  49%|████▉     |  654MB / 1.34GB, 40.0MB/s  
+New Data Upload               :  49%|████▉     |  652MB / 1.33GB, 39.9MB/s  [A
+
+  ...wnscale/model.safetensors:  51%|█████     |  675MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  51%|█████     |  675MB / 1.34GB, 40.8MB/s  
+New Data Upload               :  50%|█████     |  674MB / 1.33GB, 40.8MB/s  [A
+
+  ...wnscale/model.safetensors:  53%|█████▎    |  709MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  53%|█████▎    |  709MB / 1.34GB, 42.7MB/s  
+New Data Upload               :  53%|█████▎    |  707MB / 1.33GB, 42.6MB/s  [A
+
+  ...wnscale/model.safetensors:  55%|█████▍    |  729MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  55%|█████▍    |  729MB / 1.34GB, 43.4MB/s  
+New Data Upload               :  55%|█████▍    |  727MB / 1.33GB, 43.3MB/s  [A
+
+  ...wnscale/model.safetensors:  57%|█████▋    |  763MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  57%|█████▋    |  763MB / 1.34GB, 45.2MB/s  
+New Data Upload               :  57%|█████▋    |  761MB / 1.33GB, 45.1MB/s  [A
+
+  ...wnscale/model.safetensors:  59%|█████▉    |  785MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  59%|█████▉    |  785MB / 1.34GB, 46.0MB/s  
+New Data Upload               :  59%|█████▊    |  784MB / 1.33GB, 46.0MB/s  [A
+
+  ...wnscale/model.safetensors:  60%|██████    |  804MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  60%|██████    |  804MB / 1.34GB, 46.6MB/s  
+New Data Upload               :  60%|██████    |  802MB / 1.33GB, 46.5MB/s  [A
+
+  ...wnscale/model.safetensors:  62%|██████▏   |  826MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  62%|██████▏   |  826MB / 1.34GB, 47.4MB/s  
+New Data Upload               :  62%|██████▏   |  825MB / 1.33GB, 47.4MB/s  [A
+
+  ...wnscale/model.safetensors:  63%|██████▎   |  845MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  63%|██████▎   |  845MB / 1.34GB, 47.9MB/s  
+New Data Upload               :  63%|██████▎   |  843MB / 1.33GB, 47.9MB/s  [A
+
+  ...wnscale/model.safetensors:  65%|██████▌   |  869MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  65%|██████▌   |  869MB / 1.34GB, 48.8MB/s  
+New Data Upload               :  65%|██████▍   |  867MB / 1.33GB, 48.8MB/s  [A
+
+  ...wnscale/model.safetensors:  66%|██████▌   |  884MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  66%|██████▌   |  884MB / 1.34GB, 49.1MB/s  
+New Data Upload               :  66%|██████▌   |  882MB / 1.33GB, 49.0MB/s  [A
+
+  ...wnscale/model.safetensors:  67%|██████▋   |  898MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  67%|██████▋   |  898MB / 1.34GB, 49.2MB/s  
+New Data Upload               :  67%|██████▋   |  896MB / 1.33GB, 49.2MB/s  [A
+
+  ...wnscale/model.safetensors:  68%|██████▊   |  911MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  68%|██████▊   |  911MB / 1.34GB, 49.3MB/s  
+New Data Upload               :  68%|██████▊   |  909MB / 1.33GB, 49.2MB/s  [A
+
+  ...wnscale/model.safetensors:  69%|██████▉   |  922MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  69%|██████▉   |  922MB / 1.34GB, 49.2MB/s  
+New Data Upload               :  69%|██████▉   |  920MB / 1.33GB, 49.1MB/s  [A
+
+  ...wnscale/model.safetensors:  69%|██████▉   |  928MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  69%|██████▉   |  928MB / 1.34GB, 48.7MB/s  
+New Data Upload               :  69%|██████▉   |  926MB / 1.33GB, 48.6MB/s  [A
+
+  ...wnscale/model.safetensors:  70%|███████   |  940MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  70%|███████   |  940MB / 1.34GB, 48.6MB/s  
+New Data Upload               :  70%|███████   |  938MB / 1.33GB, 48.6MB/s  [A
+
+  ...wnscale/model.safetensors:  71%|███████   |  948MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  71%|███████   |  948MB / 1.34GB, 48.4MB/s  
+New Data Upload               :  71%|███████   |  946MB / 1.33GB, 48.3MB/s  [A
+
+  ...wnscale/model.safetensors:  72%|███████▏  |  959MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  72%|███████▏  |  959MB / 1.34GB, 48.3MB/s  
+New Data Upload               :  72%|███████▏  |  957MB / 1.33GB, 48.3MB/s  [A
+
+  ...wnscale/model.safetensors:  72%|███████▏  |  968MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  72%|███████▏  |  968MB / 1.34GB, 48.0MB/s  
+New Data Upload               :  72%|███████▏  |  966MB / 1.33GB, 48.0MB/s  [A
+
+  ...wnscale/model.safetensors:  73%|███████▎  |  974MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  73%|███████▎  |  974MB / 1.34GB, 47.6MB/s  
+New Data Upload               :  73%|███████▎  |  972MB / 1.33GB, 47.5MB/s  [A
+
+  ...wnscale/model.safetensors:  74%|███████▍  |  985MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  74%|███████▍  |  985MB / 1.34GB, 47.6MB/s  
+New Data Upload               :  74%|███████▎  |  984MB / 1.33GB, 47.5MB/s  [A
+
+  ...wnscale/model.safetensors:  74%|███████▍  |  993MB / 1.34GB            [A[AProcessing Files (0 / 1)      :  74%|███████▍  |  993MB / 1.34GB, 47.3MB/s  
+New Data Upload               :  74%|███████▍  |  991MB / 1.33GB, 47.2MB/s  [A
+
+  ...wnscale/model.safetensors:  75%|███████▌  | 1.00GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  75%|███████▌  | 1.00GB / 1.34GB, 47.2MB/s  
+New Data Upload               :  75%|███████▌  | 1.00GB / 1.33GB, 47.1MB/s  [A
+
+  ...wnscale/model.safetensors:  76%|███████▌  | 1.01GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  76%|███████▌  | 1.01GB / 1.34GB, 46.7MB/s  
+New Data Upload               :  75%|███████▌  | 1.01GB / 1.33GB, 46.6MB/s  [A
+
+  ...wnscale/model.safetensors:  76%|███████▌  | 1.02GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  76%|███████▌  | 1.02GB / 1.34GB, 46.3MB/s  
+New Data Upload               :  76%|███████▌  | 1.01GB / 1.33GB, 46.3MB/s  [A
+
+  ...wnscale/model.safetensors:  77%|███████▋  | 1.02GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  77%|███████▋  | 1.02GB / 1.34GB, 46.0MB/s  
+New Data Upload               :  77%|███████▋  | 1.02GB / 1.33GB, 46.0MB/s  [A
+
+  ...wnscale/model.safetensors:  77%|███████▋  | 1.03GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  77%|███████▋  | 1.03GB / 1.34GB, 45.6MB/s  
+New Data Upload               :  77%|███████▋  | 1.03GB / 1.33GB, 45.5MB/s  [A
+
+  ...wnscale/model.safetensors:  78%|███████▊  | 1.04GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  78%|███████▊  | 1.04GB / 1.34GB, 45.2MB/s  
+New Data Upload               :  78%|███████▊  | 1.03GB / 1.33GB, 45.2MB/s  [A
+
+  ...wnscale/model.safetensors:  78%|███████▊  | 1.04GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  78%|███████▊  | 1.04GB / 1.34GB, 44.9MB/s  
+New Data Upload               :  78%|███████▊  | 1.04GB / 1.33GB, 44.8MB/s  [A
+
+  ...wnscale/model.safetensors:  79%|███████▊  | 1.05GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  79%|███████▊  | 1.05GB / 1.34GB, 44.6MB/s  
+New Data Upload               :  79%|███████▊  | 1.05GB / 1.33GB, 44.5MB/s  [A
+
+  ...wnscale/model.safetensors:  79%|███████▉  | 1.05GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  79%|███████▉  | 1.05GB / 1.34GB, 44.1MB/s  
+New Data Upload               :  79%|███████▉  | 1.05GB / 1.33GB, 44.0MB/s  [A
+
+  ...wnscale/model.safetensors:  79%|███████▉  | 1.06GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  79%|███████▉  | 1.06GB / 1.34GB, 43.6MB/s  
+New Data Upload               :  79%|███████▉  | 1.06GB / 1.33GB, 43.5MB/s  [A
+
+  ...wnscale/model.safetensors:  80%|███████▉  | 1.07GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  80%|███████▉  | 1.07GB / 1.34GB, 43.5MB/s  
+New Data Upload               :  80%|███████▉  | 1.07GB / 1.33GB, 43.4MB/s  [A
+
+  ...wnscale/model.safetensors:  80%|████████  | 1.07GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  80%|████████  | 1.07GB / 1.34GB, 42.9MB/s  
+New Data Upload               :  80%|████████  | 1.07GB / 1.33GB, 42.9MB/s  [A
+
+  ...wnscale/model.safetensors:  80%|████████  | 1.07GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  80%|████████  | 1.07GB / 1.34GB, 42.2MB/s  
+New Data Upload               :  80%|████████  | 1.07GB / 1.33GB, 42.2MB/s  [A
+
+  ...wnscale/model.safetensors:  81%|████████  | 1.08GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  81%|████████  | 1.08GB / 1.34GB, 42.0MB/s  
+New Data Upload               :  81%|████████  | 1.08GB / 1.33GB, 42.0MB/s  [A
+
+  ...wnscale/model.safetensors:  81%|████████▏ | 1.09GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  81%|████████▏ | 1.09GB / 1.34GB, 41.7MB/s  
+New Data Upload               :  81%|████████▏ | 1.08GB / 1.33GB, 41.6MB/s  [A
+
+  ...wnscale/model.safetensors:  82%|████████▏ | 1.09GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  82%|████████▏ | 1.09GB / 1.34GB, 41.3MB/s  
+New Data Upload               :  82%|████████▏ | 1.09GB / 1.33GB, 41.3MB/s  [A
+
+  ...wnscale/model.safetensors:  82%|████████▏ | 1.10GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  82%|████████▏ | 1.10GB / 1.34GB, 40.9MB/s  
+New Data Upload               :  82%|████████▏ | 1.09GB / 1.33GB, 40.8MB/s  [A
+
+  ...wnscale/model.safetensors:  82%|████████▏ | 1.10GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  82%|████████▏ | 1.10GB / 1.34GB, 40.6MB/s  
+New Data Upload               :  82%|████████▏ | 1.10GB / 1.33GB, 40.5MB/s  [A
+
+  ...wnscale/model.safetensors:  83%|████████▎ | 1.11GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  83%|████████▎ | 1.11GB / 1.34GB, 40.3MB/s  
+New Data Upload               :  83%|████████▎ | 1.11GB / 1.33GB, 40.2MB/s  [A
+
+  ...wnscale/model.safetensors:  83%|████████▎ | 1.11GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  83%|████████▎ | 1.11GB / 1.34GB, 39.9MB/s  
+New Data Upload               :  83%|████████▎ | 1.11GB / 1.33GB, 39.9MB/s  [A
+
+  ...wnscale/model.safetensors:  83%|████████▎ | 1.12GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  83%|████████▎ | 1.12GB / 1.34GB, 39.3MB/s  
+New Data Upload               :  83%|████████▎ | 1.11GB / 1.33GB, 39.3MB/s  [A
+
+  ...wnscale/model.safetensors:  84%|████████▍ | 1.12GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  84%|████████▍ | 1.12GB / 1.34GB, 39.2MB/s  
+New Data Upload               :  84%|████████▍ | 1.12GB / 1.33GB, 39.2MB/s  [A
+
+  ...wnscale/model.safetensors:  85%|████████▍ | 1.13GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  85%|████████▍ | 1.13GB / 1.34GB, 39.1MB/s  
+New Data Upload               :  85%|████████▍ | 1.13GB / 1.33GB, 39.0MB/s  [A
+
+  ...wnscale/model.safetensors:  85%|████████▍ | 1.13GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  85%|████████▍ | 1.13GB / 1.34GB, 38.6MB/s  
+New Data Upload               :  85%|████████▍ | 1.13GB / 1.33GB, 38.6MB/s  [A
+
+  ...wnscale/model.safetensors:  85%|████████▌ | 1.14GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  85%|████████▌ | 1.14GB / 1.34GB, 38.4MB/s  
+New Data Upload               :  85%|████████▌ | 1.14GB / 1.33GB, 38.3MB/s  [A
+
+  ...wnscale/model.safetensors:  86%|████████▌ | 1.14GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  86%|████████▌ | 1.14GB / 1.34GB, 37.9MB/s  
+New Data Upload               :  86%|████████▌ | 1.14GB / 1.33GB, 37.9MB/s  [A
+
+  ...wnscale/model.safetensors:  86%|████████▌ | 1.15GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  86%|████████▌ | 1.15GB / 1.34GB, 37.4MB/s  
+New Data Upload               :  86%|████████▌ | 1.14GB / 1.33GB, 37.4MB/s  [A
+
+  ...wnscale/model.safetensors:  86%|████████▋ | 1.15GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  86%|████████▋ | 1.15GB / 1.34GB, 37.2MB/s  
+New Data Upload               :  86%|████████▋ | 1.15GB / 1.33GB, 37.2MB/s  [A
+
+  ...wnscale/model.safetensors:  87%|████████▋ | 1.16GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  87%|████████▋ | 1.16GB / 1.34GB, 37.0MB/s  
+New Data Upload               :  87%|████████▋ | 1.16GB / 1.33GB, 37.0MB/s  [A
+
+  ...wnscale/model.safetensors:  87%|████████▋ | 1.16GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  87%|████████▋ | 1.16GB / 1.34GB, 36.6MB/s  
+New Data Upload               :  87%|████████▋ | 1.16GB / 1.33GB, 36.6MB/s  [A
+
+  ...wnscale/model.safetensors:  87%|████████▋ | 1.17GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  87%|████████▋ | 1.17GB / 1.34GB, 36.2MB/s  
+New Data Upload               :  87%|████████▋ | 1.17GB / 1.33GB, 36.2MB/s  [A
+
+  ...wnscale/model.safetensors:  88%|████████▊ | 1.18GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  88%|████████▊ | 1.18GB / 1.34GB, 36.2MB/s  
+New Data Upload               :  88%|████████▊ | 1.17GB / 1.33GB, 36.1MB/s  [A
+
+  ...wnscale/model.safetensors:  88%|████████▊ | 1.18GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  88%|████████▊ | 1.18GB / 1.34GB, 35.8MB/s  
+New Data Upload               :  88%|████████▊ | 1.18GB / 1.33GB, 35.8MB/s  [A
+
+  ...wnscale/model.safetensors:  89%|████████▉ | 1.19GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  89%|████████▉ | 1.19GB / 1.34GB, 35.7MB/s  
+New Data Upload               :  89%|████████▉ | 1.19GB / 1.33GB, 35.7MB/s  [A
+
+  ...wnscale/model.safetensors:  89%|████████▉ | 1.19GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  89%|████████▉ | 1.19GB / 1.34GB, 35.5MB/s  
+New Data Upload               :  89%|████████▉ | 1.19GB / 1.33GB, 35.4MB/s  [A
+
+  ...wnscale/model.safetensors:  90%|████████▉ | 1.20GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  90%|████████▉ | 1.20GB / 1.34GB, 35.4MB/s  
+New Data Upload               :  90%|████████▉ | 1.20GB / 1.33GB, 35.4MB/s  [A
+
+  ...wnscale/model.safetensors:  90%|█████████ | 1.21GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  90%|█████████ | 1.21GB / 1.34GB, 35.3MB/s  
+New Data Upload               :  90%|█████████ | 1.21GB / 1.33GB, 35.2MB/s  [A
+
+  ...wnscale/model.safetensors:  91%|█████████ | 1.22GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  91%|█████████ | 1.22GB / 1.34GB, 35.3MB/s  
+New Data Upload               :  91%|█████████ | 1.21GB / 1.33GB, 35.2MB/s  [A
+
+  ...wnscale/model.safetensors:  92%|█████████▏| 1.23GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  92%|█████████▏| 1.23GB / 1.34GB, 35.3MB/s  
+New Data Upload               :  92%|█████████▏| 1.22GB / 1.33GB, 35.3MB/s  [A
+
+  ...wnscale/model.safetensors:  92%|█████████▏| 1.23GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  92%|█████████▏| 1.23GB / 1.34GB, 35.2MB/s  
+New Data Upload               :  92%|█████████▏| 1.23GB / 1.33GB, 35.2MB/s  [A
+
+  ...wnscale/model.safetensors:  93%|█████████▎| 1.24GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  93%|█████████▎| 1.24GB / 1.34GB, 35.2MB/s  
+New Data Upload               :  93%|█████████▎| 1.24GB / 1.33GB, 35.2MB/s  [A
+
+  ...wnscale/model.safetensors:  94%|█████████▍| 1.25GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  94%|█████████▍| 1.25GB / 1.34GB, 35.4MB/s  
+New Data Upload               :  94%|█████████▍| 1.25GB / 1.33GB, 35.4MB/s  [A
+
+  ...wnscale/model.safetensors:  95%|█████████▍| 1.26GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  95%|█████████▍| 1.26GB / 1.34GB, 35.5MB/s  
+New Data Upload               :  95%|█████████▍| 1.26GB / 1.33GB, 35.4MB/s  [A
+
+  ...wnscale/model.safetensors:  95%|█████████▌| 1.27GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  95%|█████████▌| 1.27GB / 1.34GB, 35.6MB/s  
+New Data Upload               :  95%|█████████▌| 1.27GB / 1.33GB, 35.6MB/s  [A
+
+  ...wnscale/model.safetensors:  96%|█████████▋| 1.29GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  96%|█████████▋| 1.29GB / 1.34GB, 35.8MB/s  
+New Data Upload               :  96%|█████████▋| 1.28GB / 1.33GB, 35.8MB/s  [A
+
+  ...wnscale/model.safetensors:  97%|█████████▋| 1.30GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  97%|█████████▋| 1.30GB / 1.34GB, 36.0MB/s  
+New Data Upload               :  97%|█████████▋| 1.30GB / 1.33GB, 36.0MB/s  [A
+
+  ...wnscale/model.safetensors:  98%|█████████▊| 1.30GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  98%|█████████▊| 1.30GB / 1.34GB, 35.8MB/s  
+New Data Upload               :  98%|█████████▊| 1.30GB / 1.33GB, 35.7MB/s  [A
+
+  ...wnscale/model.safetensors:  98%|█████████▊| 1.31GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  98%|█████████▊| 1.31GB / 1.34GB, 35.2MB/s  
+New Data Upload               :  98%|█████████▊| 1.30GB / 1.33GB, 35.2MB/s  [A
+
+  ...wnscale/model.safetensors:  98%|█████████▊| 1.31GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  98%|█████████▊| 1.31GB / 1.34GB, 34.1MB/s  
+New Data Upload               :  98%|█████████▊| 1.31GB / 1.33GB, 34.1MB/s  [A
+
+  ...wnscale/model.safetensors:  98%|█████████▊| 1.31GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  98%|█████████▊| 1.31GB / 1.34GB, 33.6MB/s  
+New Data Upload               :  98%|█████████▊| 1.31GB / 1.33GB, 33.5MB/s  [A
+
+  ...wnscale/model.safetensors:  98%|█████████▊| 1.31GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  98%|█████████▊| 1.31GB / 1.34GB, 33.1MB/s  
+New Data Upload               :  98%|█████████▊| 1.31GB / 1.33GB, 33.0MB/s  [A
+
+  ...wnscale/model.safetensors:  98%|█████████▊| 1.31GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  98%|█████████▊| 1.31GB / 1.34GB, 32.6MB/s  
+New Data Upload               :  98%|█████████▊| 1.31GB / 1.33GB, 32.6MB/s  [A
+
+  ...wnscale/model.safetensors:  98%|█████████▊| 1.31GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  98%|█████████▊| 1.31GB / 1.34GB, 32.1MB/s  
+New Data Upload               :  98%|█████████▊| 1.31GB / 1.33GB, 32.1MB/s  [A
+
+  ...wnscale/model.safetensors:  98%|█████████▊| 1.31GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  98%|█████████▊| 1.31GB / 1.34GB, 31.1MB/s  
+New Data Upload               :  98%|█████████▊| 1.31GB / 1.33GB, 31.1MB/s  [A
+
+  ...wnscale/model.safetensors:  98%|█████████▊| 1.31GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  98%|█████████▊| 1.31GB / 1.34GB, 30.6MB/s  
+New Data Upload               :  98%|█████████▊| 1.31GB / 1.33GB, 30.6MB/s  [A
+
+  ...wnscale/model.safetensors:  99%|█████████▊| 1.32GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  99%|█████████▊| 1.32GB / 1.34GB, 30.2MB/s  
+New Data Upload               :  99%|█████████▊| 1.31GB / 1.33GB, 30.2MB/s  [A
+
+  ...wnscale/model.safetensors:  99%|█████████▊| 1.32GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  99%|█████████▊| 1.32GB / 1.34GB, 29.8MB/s  
+New Data Upload               :  99%|█████████▊| 1.32GB / 1.33GB, 29.8MB/s  [A
+
+  ...wnscale/model.safetensors:  99%|█████████▉| 1.32GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  99%|█████████▉| 1.32GB / 1.34GB, 29.3MB/s  
+New Data Upload               :  99%|█████████▉| 1.32GB / 1.33GB, 29.3MB/s  [A
+
+  ...wnscale/model.safetensors:  99%|█████████▉| 1.32GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  99%|█████████▉| 1.32GB / 1.34GB, 28.9MB/s  
+New Data Upload               :  99%|█████████▉| 1.32GB / 1.33GB, 28.9MB/s  [A
+
+  ...wnscale/model.safetensors:  99%|█████████▉| 1.32GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  99%|█████████▉| 1.32GB / 1.34GB, 28.5MB/s  
+New Data Upload               :  99%|█████████▉| 1.32GB / 1.33GB, 28.5MB/s  [A
+
+  ...wnscale/model.safetensors:  99%|█████████▉| 1.33GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  99%|█████████▉| 1.33GB / 1.34GB, 28.2MB/s  
+New Data Upload               :  99%|█████████▉| 1.32GB / 1.33GB, 28.2MB/s  [A
+
+  ...wnscale/model.safetensors:  99%|█████████▉| 1.33GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  99%|█████████▉| 1.33GB / 1.34GB, 27.9MB/s  
+New Data Upload               :  99%|█████████▉| 1.33GB / 1.33GB, 27.8MB/s  [A
+
+  ...wnscale/model.safetensors:  99%|█████████▉| 1.33GB / 1.34GB            [A[AProcessing Files (0 / 1)      :  99%|█████████▉| 1.33GB / 1.34GB, 27.5MB/s  
+New Data Upload               :  99%|█████████▉| 1.33GB / 1.33GB, 27.5MB/s  [A
+
+  ...wnscale/model.safetensors: 100%|█████████▉| 1.33GB / 1.34GB            [A[AProcessing Files (0 / 1)      : 100%|█████████▉| 1.33GB / 1.34GB, 27.2MB/s  
+New Data Upload               : 100%|█████████▉| 1.33GB / 1.33GB, 27.2MB/s  [A
+
+  ...wnscale/model.safetensors: 100%|█████████▉| 1.33GB / 1.34GB            [A[AProcessing Files (0 / 1)      : 100%|█████████▉| 1.33GB / 1.34GB, 26.8MB/s  
+New Data Upload               : 100%|█████████▉| 1.33GB / 1.33GB, 26.8MB/s  [A
+
+  ...wnscale/model.safetensors: 100%|█████████▉| 1.34GB / 1.34GB            [A[AProcessing Files (0 / 1)      : 100%|█████████▉| 1.34GB / 1.34GB, 26.5MB/s  
+New Data Upload               : 100%|█████████▉| 1.33GB / 1.33GB, 26.5MB/s  [A
+
+  ...wnscale/model.safetensors: 100%|██████████| 1.34GB / 1.34GB            [A[AProcessing Files (1 / 1)      : 100%|██████████| 1.34GB / 1.34GB, 24.7MB/s  
+New Data Upload               : 100%|██████████| 1.33GB / 1.33GB, 24.7MB/s  [AProcessing Files (1 / 1)      : 100%|██████████| 1.34GB / 1.34GB, 24.7MB/s  
+New Data Upload               : 100%|██████████| 1.33GB / 1.33GB, 24.7MB/s  
+  ...wnscale/model.safetensors: 100%|██████████| 1.34GB / 1.34GB            
+Finished Training for all degradation methods.

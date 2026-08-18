@@ -4,9 +4,8 @@ Bachelor thesis investigating TrOCR performance under image degradation.
 
 ## Project Structure
 
-
 - `notebooks/` 
-  - `results/` — displays results from CSV file in results folder
+  - `results/` — displays results from results CSV file
   - `tests/` — tests
 - `scripts/`
   - `data_preparation/` — one-time scripts for downloading and uploading degraded datasets to HuggingFace
@@ -28,6 +27,9 @@ https://fki.tic.heia-fr.ch/databases/iam-handwriting-database
 
 Original RIMES dataset was downloaded from:
 https://huggingface.co/datasets/Teklia/RIMES-2011-line
+
+Original CATMuS Medieval dataset was downloaded from:
+https://huggingface.co/datasets/CATMuS/medieval
 
 ## Data Preparation
 Split files for IAM use the Aachen partition from the TrOCR paper:

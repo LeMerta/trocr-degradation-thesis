@@ -1,0 +1,122 @@
+"""
+baseline_eval_catmus_ft.py
+
+Evaluates the finetuned base CATMuS TrOCR model on the raw CATMuS test set
+and computes CER and WER, both lowered and not lowered.
+Stores results in results/results.csv .
+"""
+
+import torch
+import csv
+import os
+from datasets import load_dataset
+from transformers import TrOCRProcessor, VisionEncoderDecoderModel
+from jiwer import cer, wer
+
+# Configuration
+
+PROCESSOR_ID = "microsoft/trocr-base-handwritten"
+HF_REPO_ID_MODELS = "LeMerta/finetuned-trocr-models"
+MODEL_ID = "CATMuS_base"
+BATCH_SIZE = 8
+CSV_PATH = "results/results.csv"
+FIELDNAMES = [
+    "dataset",
+    "method",
+    "intensity",
+    "model",
+    "cer",
+    "wer",
+    "cer_lower",
+    "wer_lower",
+]
+
+# Load dataset
+
+print("Loading CATMuS test set...")
+dataset = load_dataset("CATMuS/medieval", split="test")
+print(f"  {len(dataset)} samples")
+
+# Load model
+
+print(f"\nLoading model: {MODEL_ID}...")
+processor = TrOCRProcessor.from_pretrained(PROCESSOR_ID)
+model = VisionEncoderDecoderModel.from_pretrained(
+    f"{HF_REPO_ID_MODELS}",
+    subfolder=f"CATMuS_models/{MODEL_ID}",
+)
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+model = model.to(device)
+model.eval()
+print(f"  Running on: {device}")
+
+# Run inference
+
+print("\nRunning inference...")
+predictions = []
+references = []
+
+for i in range(0, len(dataset), BATCH_SIZE):
+    batch = dataset[i : i + BATCH_SIZE]
+
+    images = [
+        img.convert("RGB") for img in batch["im"]
+    ]
+    labels = batch["text"]
+
+    pixel_values = processor(images, return_tensors="pt").pixel_values.to(device)
+
+    with torch.no_grad():
+        generated_ids = model.generate(pixel_values, max_new_tokens=64, num_beams=10)
+
+    preds = processor.batch_decode(generated_ids, skip_special_tokens=True)
+    predictions.extend(preds)
+    references.extend(labels)
+
+    if (i // BATCH_SIZE) % 10 == 0:
+        print(f"  Processed {min(i + BATCH_SIZE, len(dataset))}/{len(dataset)} samples")
+
+# Compute metrics
+
+predictions = [p.strip() for p in predictions]
+references = [r.strip() for r in references]
+
+predictions_lowered = [p.lower() for p in predictions]
+references_lowered = [r.lower() for r in references]
+
+print("\nComputing metrics...")
+cer_score = cer(references, predictions)
+wer_score = wer(references, predictions)
+
+cer_score_lowered = cer(references_lowered, predictions_lowered)
+wer_score_lowered = wer(references_lowered, predictions_lowered)
+
+print(f"\nResults:")
+print(f"  CER: {cer_score * 100:.2f}%")
+print(f"  WER: {wer_score * 100:.2f}%")
+print(f"  CER (lowered): {cer_score_lowered * 100:.2f}%")
+print(f"  WER (lowered): {wer_score_lowered * 100:.2f}%")
+
+# Push results to csv file
+
+write_header = not os.path.exists(CSV_PATH)
+
+with open(CSV_PATH, "a", newline="") as f:
+    writer = csv.DictWriter(f, fieldnames=FIELDNAMES)
+    if write_header:
+        writer.writeheader()
+    writer.writerow(
+        {
+            "dataset": "catmus",
+            "method": "none",
+            "intensity": "none",
+            "model": MODEL_ID,
+            "cer": cer_score,
+            "wer": wer_score,
+            "cer_lower": cer_score_lowered,
+            "wer_lower": wer_score_lowered,
+        }
+    )
+
+print("Results saved to results/results.csv")

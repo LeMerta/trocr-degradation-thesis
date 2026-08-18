@@ -1,8 +1,8 @@
 """
-rimes_degradation_ft_eval.py
+catmus_degradation_ft_eval.py
 
-Evaluates finetuned TrOCR models on all RIMES degraded test sets and saves
-CER and WER (lowered and not lowered) results to the shared results CSV.
+Evaluates finetuned CATMuS TrOCR models on the corresponding CATMuS degraded test sets and base set and saves
+CER and WER results to the shared results CSV.
 
 Results are appended to "results/results.csv" — evaluate_baseline.py needs to be run first to
 ensure the CSV exists before running this script.
@@ -15,13 +15,20 @@ from datasets import load_dataset
 from transformers import TrOCRProcessor, VisionEncoderDecoderModel
 from jiwer import cer, wer
 import os
-from PIL import Image
-import io
+
+import sys
+sys.path.append("src")
+from degradation import (
+    apply_awgn,
+    apply_gaussian_blur,
+    apply_jpeg_compression,
+)
+
 
 # Configuration
 
-HF_REPO_ID = "LeMerta/bachelor-thesis-datasets"
-BATCH_SIZE = 16
+HF_REPO_ID_MODELS = "LeMerta/finetuned-trocr-models"
+BATCH_SIZE = 8
 CSV_PATH = "results/results.csv"
 FIELDNAMES = [
     "dataset",
@@ -34,19 +41,23 @@ FIELDNAMES = [
     "wer_lower",
 ]
 
+MODELS_TO_DEGRADATION = {
+    "CATMuS_awgn": "awgn",
+    "CATMuS_blur": "blur",
+    "CATMuS_jpeg_compression": "jpeg_compression",
+}
+
 DEGRADATIONS = [
-    ("awgn", [50, 100, 150, 200, 250]),
-    ("blur", [1.0, 2.0, 3.0, 4.0, 5.0]),
-    ("jpeg_compression", [10, 6, 3, 1]),
-    ("downscale", [35, 30, 25, 20, 15]),
+    ("awgn", apply_awgn,  [50, 100, 150, 200, 250]),
+    ("blur", apply_gaussian_blur, [1.0, 2.0, 3.0, 4.0, 5.0]),
+    ("jpeg_compression", apply_jpeg_compression, [10, 6, 3, 1]),
 ]
 
-MODEL_IDS = [
-    "RIMES_awgn",
-    "RIMES_blur",
-    "RIMES_jpeg_compression",
-    "RIMES_downscale",
-]
+# Load CATMuS dataset
+
+print("Loading dataset...")
+catmus = load_dataset("CATMuS/medieval")
+dataset = catmus["test"]
 
 # Check if CSV exists
 
@@ -54,7 +65,6 @@ if not os.path.exists(CSV_PATH):
     raise FileNotFoundError(
         f"Results CSV not found at {CSV_PATH} — run evaluate_baseline.py first"
     )
-
 
 # Help functions
 
@@ -69,17 +79,17 @@ def already_evaluated(method: str, intensity, Model_ID: str) -> bool:
         )
 
 
-def run_inference(dataset, model, processor, raw: bool) -> tuple[list[str], list[str]]:
+def run_inference(dataset, method_fn, model, processor, intensity) -> tuple[list[str], list[str]]:
     """Run TrOCR inference on a dataset and return predictions and references."""
     predictions = []
     references = []
 
     for i in range(0, len(dataset), BATCH_SIZE):
         batch = dataset[i : i + BATCH_SIZE]
-        if raw:
-            images = [Image.open(io.BytesIO(img["bytes"])).convert("RGB") for img in batch["image"]]
+        if method_fn is None:
+            images = [img.convert("RGB") for img in batch["im"]]
         else:
-            images = [img.convert("RGB") for img in batch["image"]]
+            images = [method_fn(img.convert("RGB"), intensity) for img in batch["im"]]
         labels = batch["text"]
 
         pixel_values = processor(images, return_tensors="pt").pixel_values.to(device)
@@ -88,14 +98,14 @@ def run_inference(dataset, model, processor, raw: bool) -> tuple[list[str], list
             generated_ids = model.generate(
                 pixel_values,
                 max_new_tokens=64,
-                num_beams=10,
+                num_beams=4,
             )
 
         preds = processor.batch_decode(generated_ids, skip_special_tokens=True)
         predictions.extend(preds)
         references.extend(labels)
 
-        if (i // BATCH_SIZE) % 10 == 0:
+        if (i // BATCH_SIZE) % 100 == 0:
             print(f"    {min(i + BATCH_SIZE, len(dataset))}/{len(dataset)} samples")
 
     return predictions, references
@@ -116,32 +126,19 @@ def compute_metrics(predictions: list[str], references: list[str]) -> dict:
         "wer_lower": wer(references_lowered, predictions_lowered),
     }
 
-def eval_and_write(method_name, intensity, Model_ID, model, processor, writer, f):
-    """Evaluate a single method+intensity+model combo and write results to CSV if not already done."""
+def eval_and_write(method_name, method_fn, intensity, Model_ID, model, processor, writer, f):
     print(f"\nMethod={method_name} | intensity={intensity}")
     if not already_evaluated(method_name, intensity, Model_ID):
         if method_name == "none" and intensity=="none":
-            path = f"rimes/raw/test.parquet"
-            dataset = load_dataset(
-                "parquet",
-                data_files=f"hf://datasets/{HF_REPO_ID}/{path}",
-                split="train",
-            )
-            predictions, references = run_inference(dataset, model, processor, raw= True)
+            predictions, references = run_inference(dataset=dataset, method_fn=method_fn, model=model, processor=processor, intensity=None)
         else:
-            path = f"rimes/{method_name}/test/{method_name}_{intensity}.parquet"
-            dataset = load_dataset(
-                "parquet",
-                data_files=f"hf://datasets/{HF_REPO_ID}/{path}",
-                split="train",
-            )
-            predictions, references = run_inference(dataset, model, processor, raw = False)
+            predictions, references = run_inference(dataset=dataset, method_fn=method_fn, model=model, processor=processor, intensity=intensity)
         
         metrics = compute_metrics(predictions, references)
 
         writer.writerow(
             {
-                "dataset": "rimes",
+                "dataset": "catmus",
                 "method": method_name,
                 "intensity": intensity,
                 "model": Model_ID,
@@ -158,7 +155,6 @@ def eval_and_write(method_name, intensity, Model_ID, model, processor, writer, f
             f"  CER (lower): {metrics['cer_lower']*100:.2f}% | WER (lower): {metrics['wer_lower']*100:.2f}%"
         )
 
-        dataset.cleanup_cache_files()
     else:
         print(f" Already done, skipping")
 
@@ -167,12 +163,12 @@ def eval_and_write(method_name, intensity, Model_ID, model, processor, writer, f
 with open(CSV_PATH, "a", newline="") as f:
     writer = csv.DictWriter(f, fieldnames=FIELDNAMES)
 
-    for Model_ID in MODEL_IDS:
+    for Model_ID in MODELS_TO_DEGRADATION.keys():
         # Load finetuned model
         print(f"Loading model: {Model_ID}...")
         model = VisionEncoderDecoderModel.from_pretrained(
             "LeMerta/finetuned-trocr-models",
-            subfolder=f"RIMES_models/{Model_ID}",
+            subfolder=f"CATMuS_models/{Model_ID}",
         )
         processor = TrOCRProcessor.from_pretrained("microsoft/trocr-base-handwritten")
         device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -182,6 +178,7 @@ with open(CSV_PATH, "a", newline="") as f:
 
         eval_and_write(
             method_name="none", 
+            method_fn=None,
             intensity="none", 
             Model_ID=Model_ID, 
             model=model, 
@@ -190,17 +187,19 @@ with open(CSV_PATH, "a", newline="") as f:
             f=f
         )     
 
-        for method_name, intensities in DEGRADATIONS:
-            for intensity in intensities:
-                eval_and_write(
-                    method_name=method_name, 
-                    intensity=intensity, 
-                    Model_ID=Model_ID, 
-                    model=model, 
-                    processor=processor, 
-                    writer=writer,
-                    f=f
-                )
+        for method_name, method_fn, intensities in DEGRADATIONS:
+            if MODELS_TO_DEGRADATION[Model_ID] == method_name:
+                for intensity in intensities:
+                    eval_and_write(
+                        method_name=method_name, 
+                        method_fn=method_fn,
+                        intensity=intensity, 
+                        Model_ID=Model_ID, 
+                        model=model, 
+                        processor=processor, 
+                        writer=writer,
+                        f=f
+                    )
             
 
 print("\nAll evaluations complete.")
