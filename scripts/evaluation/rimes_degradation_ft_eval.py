@@ -39,6 +39,7 @@ DEGRADATIONS = [
     ("blur", [1.0, 2.0, 3.0, 4.0, 5.0]),
     ("jpeg_compression", [10, 6, 3, 1]),
     ("downscale", [35, 30, 25, 20, 15]),
+    ("combo", [1, 2, 3, 4, 5]),
 ]
 
 MODEL_IDS = [
@@ -46,6 +47,8 @@ MODEL_IDS = [
     "RIMES_blur",
     "RIMES_jpeg_compression",
     "RIMES_downscale",
+    "RIMES_combo",
+    "RIMES_mixed",
 ]
 
 # Check if CSV exists
@@ -128,6 +131,14 @@ def eval_and_write(method_name, intensity, Model_ID, model, processor, writer, f
                 split="train",
             )
             predictions, references = run_inference(dataset, model, processor, raw= True)
+        elif method_name == "combo":
+            path = f"rimes/combined_degradations/test/combo_{intensity}.parquet"
+            dataset = load_dataset(
+                "parquet",
+                data_files=f"hf://datasets/{HF_REPO_ID}/{path}",
+                split="train",
+            )
+            predictions, references = run_inference(dataset, model, processor, raw = False)
         else:
             path = f"rimes/{method_name}/test/{method_name}_{intensity}.parquet"
             dataset = load_dataset(

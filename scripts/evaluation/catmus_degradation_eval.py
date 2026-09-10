@@ -22,6 +22,7 @@ from degradation import (
     apply_awgn,
     apply_gaussian_blur,
     apply_jpeg_compression,
+    apply_downscaling,
 )
 
 
@@ -46,6 +47,7 @@ DEGRADATIONS = [
     ("awgn", apply_awgn,  [50, 100, 150, 200, 250]),
     ("blur", apply_gaussian_blur, [1.0, 2.0, 3.0, 4.0, 5.0]),
     ("jpeg_compression", apply_jpeg_compression, [10, 6, 3, 1]),
+    ("downscale", apply_downscaling, [35, 30, 25, 20, 15]),
 ]
 
 # Check if CSV exists

@@ -65,7 +65,7 @@ def apply_jpeg_compression(image: Image.Image, quality: int) -> Image.Image:
 
 def apply_downscaling(image: Image.Image, target_height: int) -> Image.Image:
     """
-    Downscales image to target_height then upscales back to original size.
+    Downscales image to target_height.
     
     Args:
         image:         PIL Image converted to RGB.

@@ -40,6 +40,7 @@ DEGRADATIONS = [
     ("blur", [1.0, 2.0, 3.0, 4.0, 5.0]),
     ("jpeg_compression", [10, 6, 3, 1]),
     ("downscale", [35, 30, 25, 20, 15]),
+    ("combo", [1, 2, 3, 4, 5]),
 ]
 
 # Check if CSV exists
@@ -133,7 +134,10 @@ with open(CSV_PATH, "a", newline="") as f:
                 print(f"  Already done, skipping")
                 continue
 
-            path = f"rimes/{method_name}/test/{method_name}_{intensity}.parquet"
+            if method_name == "combo":
+                path = f"rimes/combined_degradations/test/combo_{intensity}.parquet"
+            else:
+                path = f"rimes/{method_name}/test/{method_name}_{intensity}.parquet"
             dataset = load_dataset(
                 "parquet",
                 data_files=f"hf://datasets/{HF_REPO_ID}/{path}",

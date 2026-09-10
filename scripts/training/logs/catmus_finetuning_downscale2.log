@@ -1,0 +1,65 @@
+nohup: ignoring input
+Loading processor...
+/data/lmerta/venvs/myenv/lib/python3.9/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Loading datasets...
+  Train: 152816 | Val: 19402
+Starting training...
+Training for: method=downscale | intensity=25 
+There were missing keys in the checkpoint model loaded: ['decoder.output_projection.weight'].
+/data/lmerta/venvs/myenv/lib/python3.9/site-packages/transformers/trainer.py:3108: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(os.path.join(checkpoint, OPTIMIZER_NAME), map_location=map_location)
+/data/lmerta/venvs/myenv/lib/python3.9/site-packages/transformers/trainer.py:2843: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  checkpoint_rng_state = torch.load(rng_file)
+{'loss': 0.0078, 'grad_norm': 12.27216625213623, 'learning_rate': 1.6000000000000001e-06, 'epoch': 21.0}
+{'eval_loss': 1.0527410507202148, 'eval_cer': 0.08804742243980507, 'eval_runtime': 2106.1711, 'eval_samples_per_second': 9.212, 'eval_steps_per_second': 2.303, 'epoch': 21.0}
+{'loss': 0.006, 'grad_norm': 0.03718471899628639, 'learning_rate': 1.2000000000000002e-06, 'epoch': 22.0}
+{'eval_loss': 1.0647602081298828, 'eval_cer': 0.08819884750245892, 'eval_runtime': 2114.3626, 'eval_samples_per_second': 9.176, 'eval_steps_per_second': 2.294, 'epoch': 22.0}
+{'loss': 0.0045, 'grad_norm': 0.10317502915859222, 'learning_rate': 8.000000000000001e-07, 'epoch': 23.0}
+{'eval_loss': 1.0646916627883911, 'eval_cer': 0.08761537478397617, 'eval_runtime': 2115.1779, 'eval_samples_per_second': 9.173, 'eval_steps_per_second': 2.293, 'epoch': 23.0}
+{'loss': 0.0036, 'grad_norm': 0.009137253277003765, 'learning_rate': 4.0000000000000003e-07, 'epoch': 24.0}
+{'eval_loss': 1.0807998180389404, 'eval_cer': 0.08720555466027996, 'eval_runtime': 2115.9525, 'eval_samples_per_second': 9.169, 'eval_steps_per_second': 2.293, 'epoch': 24.0}
+{'loss': 0.0028, 'grad_norm': 0.020043713971972466, 'learning_rate': 0.0, 'epoch': 25.0}
+{'eval_loss': 1.0798484086990356, 'eval_cer': 0.08684574648388226, 'eval_runtime': 2114.0296, 'eval_samples_per_second': 9.178, 'eval_steps_per_second': 2.295, 'epoch': 25.0}
+There were missing keys in the checkpoint model loaded: ['decoder.output_projection.weight'].
+{'train_runtime': 57230.6346, 'train_samples_per_second': 66.754, 'train_steps_per_second': 16.689, 'train_loss': 0.0009866721786612454, 'epoch': 25.0}
+Best val CER for downscale_25: 0.0868
+Traceback (most recent call last):
+  File "/data/lmerta/venvs/myenv/lib/python3.9/site-packages/huggingface_hub/utils/_http.py", line 403, in hf_raise_for_status
+    response.raise_for_status()
+  File "/data/lmerta/venvs/myenv/lib/python3.9/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://huggingface.co/api/models/LeMerta/finetuned-trocr-models/preupload/main
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lmerta/trocr-degradation-thesis/scripts/training/catmus_finetuning.py", line 189, in <module>
+    api.upload_folder(
+  File "/data/lmerta/venvs/myenv/lib/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/data/lmerta/venvs/myenv/lib/python3.9/site-packages/huggingface_hub/hf_api.py", line 1687, in _inner
+    return fn(self, *args, **kwargs)
+  File "/data/lmerta/venvs/myenv/lib/python3.9/site-packages/huggingface_hub/hf_api.py", line 4930, in upload_folder
+    commit_info = self.create_commit(
+  File "/data/lmerta/venvs/myenv/lib/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/data/lmerta/venvs/myenv/lib/python3.9/site-packages/huggingface_hub/hf_api.py", line 1687, in _inner
+    return fn(self, *args, **kwargs)
+  File "/data/lmerta/venvs/myenv/lib/python3.9/site-packages/huggingface_hub/hf_api.py", line 4229, in create_commit
+    self.preupload_lfs_files(
+  File "/data/lmerta/venvs/myenv/lib/python3.9/site-packages/huggingface_hub/hf_api.py", line 4449, in preupload_lfs_files
+    _fetch_upload_modes(
+  File "/data/lmerta/venvs/myenv/lib/python3.9/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/data/lmerta/venvs/myenv/lib/python3.9/site-packages/huggingface_hub/_commit_api.py", line 752, in _fetch_upload_modes
+    hf_raise_for_status(resp)
+  File "/data/lmerta/venvs/myenv/lib/python3.9/site-packages/huggingface_hub/utils/_http.py", line 453, in hf_raise_for_status
+    raise _format(RepositoryNotFoundError, message, response) from e
+huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-6a961b8f-260aea8f5f7999e55d3154d2;3d74d3de-432f-4de5-814f-c4c8eca3fc3a)
+
+Repository Not Found for url: https://huggingface.co/api/models/LeMerta/finetuned-trocr-models/preupload/main.
+Please make sure you specified the correct `repo_id` and `repo_type`.
+If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+Invalid username or password.
+Note: Creating a commit assumes that the repo already exists on the Huggingface Hub. Please use `create_repo` if it's not the case.
